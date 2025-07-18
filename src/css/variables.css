@@ -1,0 +1,8 @@
+:root {
+  --sections-gap: 36px;
+  --transition-default: all 0.2s ease;
+  --color-accent: #4a709c;
+  --color-accent-hover: #345b82;
+  --color-bg-light: #e8edf5;
+  --color-shadow: rgba(0, 0, 0, 0.06);
+}

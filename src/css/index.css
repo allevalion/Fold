@@ -1,0 +1,261 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sections-gap);
+}
+
+.hero {
+  position: relative;
+  margin-top: 36px;
+  text-align: center;
+  padding: 142px 320px 112px;
+  background-image: url("../assets/img/hero-background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 0;
+}
+
+.hero__title {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 110px;
+  font-weight: 800;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.hero__description {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: #fff;
+  margin-top: 20px;
+  width: 100%;
+  max-width: 376px;
+}
+
+.button {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background-color: #338ff2;
+  color: #f7fafc;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+}
+
+.hero__title,
+.hero__description,
+.hero__button {
+  position: relative;
+  z-index: 1;
+}
+
+.hero__button {
+  margin-top: 28px;
+  padding: 14px 36px;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.section__title {
+  margin-bottom: 36px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 22px;
+  color: #0d141c;
+  font-weight: 700;
+}
+
+.categories__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  column-gap: 56px;
+  row-gap: 24px;
+  justify-content: center;
+  width: 100%;
+  max-width: calc(3 * 300px + 2 * 56px);
+  margin: 0 auto;
+}
+
+.categories__item {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  max-width: 300px;
+  width: 100%;
+  min-height: 350px;
+}
+
+.categories__image {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.categories__name {
+  align-self: start;
+  line-height: 24px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #0d141c;
+}
+
+.products__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+  column-gap: 39px;
+  row-gap: 24px;
+  justify-content: center;
+  width: 100%;
+  max-width: calc(4 * 225px + 3 * 39px);
+  margin: 0 auto;
+}
+
+.products__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 250px;
+  width: 100%;
+  min-height: 250px;
+}
+
+.products__image {
+  width: 100%;
+  height: auto;
+  margin-bottom: 12px;
+  border-radius: 12px;
+}
+
+.products__name {
+  align-self: start;
+  line-height: 24px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #0d141c;
+}
+
+.products__price {
+  align-self: start;
+  line-height: 21px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #4a709c;
+}
+
+.products__link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 32px auto 0;
+  margin-top: 32px;
+  padding: 12px 32px;
+  width: fit-content;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #0d141c;
+  border-radius: 16px;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.button {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background-color: #338ff2;
+  color: #f7fafc;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  padding: 14px 36px;
+  font-size: 32px;
+  font-weight: 700;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.button:hover {
+  background-color: #2a75cc;
+  color: #e1eaf9;
+  transform: scale(1.05);
+  outline: none;
+  box-shadow: 0 0 6px #2a75cc88;
+}
+
+.button:focus-visible,
+.button:focus {
+  outline: 2px solid #2a75cc;
+  outline-offset: 3px;
+  box-shadow: 0 0 8px #2a75cccc;
+  transform: scale(1.05);
+}
+
+.button:active {
+  background-color: #265db3;
+  color: #d9e5fb;
+  transform: scale(0.95);
+  box-shadow: none;
+  transition: none;
+}
+
+.products__link:hover,
+.products__link:focus {
+  background-color: #1a2230;
+  color: #aad4ff;
+  outline: none;
+  box-shadow: 0 0 6px #aad4ff88;
+}
+
+.products__link svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.products__link:hover svg,
+.products__link:focus svg {
+  transform: translateX(5px);
+}
+
+.products__link:focus-visible {
+  outline: 2px solid #aad4ff;
+  outline-offset: 3px;
+  background-color: #1a2230;
+  color: #aad4ff;
+  box-shadow: 0 0 6px #aad4ff88;
+}
+
+.products__link:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.products__link:active {
+  background-color: #0f1a2b;
+  color: #7fbfff;
+  transform: scale(0.98);
+  box-shadow: none;
+  transition: none;
+}
