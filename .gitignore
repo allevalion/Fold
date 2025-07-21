@@ -1,8 +1,7 @@
 node_modules/
+src/css/variables.py
 package.json
 package-lock.json
 stylelint.config.js
 .prettierrc
 .editorconfig
-webpack.config.js
-commitlint.config.js
