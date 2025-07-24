@@ -32,7 +32,7 @@
 }
 
 .header__logo:focus-visible {
-  outline: 2px dashed var(--color-accent);
+  outline: 2px dashed var(--color-secondary);
   outline-offset: 4px;
 }
 
@@ -78,12 +78,12 @@
   bottom: -2px;
   inline-size: 0%;
   block-size: 2px;
-  background-color: var(--color-accent);
-  transition: width 0.3s ease;
+  background-color: var(--color-secondary);
+  transition: inline-size 0.3s ease;
 }
 
 .header__nav-link:hover {
-  color: var(--color-accent);
+  color: var(--color-secondary);
 }
 
 .header__nav-link:hover::after {
@@ -91,7 +91,7 @@
 }
 
 .header__nav-link:focus-visible {
-  outline: 2px dashed var(--color-accent);
+  outline: 2px dashed var(--color-secondary);
   outline-offset: 4px;
 }
 
