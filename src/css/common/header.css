@@ -201,7 +201,7 @@
 }
 
 .header__burger-line:nth-of-type(1) {
-  top: 0px;
+  top: 0;
   transform-origin: left center;
 }
 
@@ -219,7 +219,7 @@
 
 .header__burger.active .header__burger-line:nth-of-type(1) {
   transform: rotate(45deg);
-  top: 0px;
+  top: 0;
   left: 5px;
 }
 
@@ -286,6 +286,7 @@
 }
 
 @media (width <= 769px) {
+
   .header__logo-svg {
     inline-size: 34px;
     block-size: 34px;
@@ -326,6 +327,7 @@
 }
 
 @media (width <= 376px) {
+
   .header__right .header__search {
     display: none;
   }

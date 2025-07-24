@@ -25,7 +25,7 @@
   --border-radius-large: 20px;
 
   /* Тени */
-  --shadow-default: 0 8px 20px rgba(0, 0, 0, 0.08);
+  --shadow-default: 0 8px 20px rgb(0 0 0 / 0.08);
 
   /* Отступы */
   --gap-small: 8px;

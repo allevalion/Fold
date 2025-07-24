@@ -1,8 +1,10 @@
 @keyframes dropdown-fade {
+
   0% {
     opacity: 0;
     transform: translateY(-10px);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
@@ -67,9 +69,6 @@
 .dropdown-button__icon {
   inline-size: 25px;
   block-size: 25px;
-}
-
-.dropdown-button__icon {
   transition: transform 0.3s ease;
 }
 
@@ -82,8 +81,6 @@
   position: absolute;
   background: white;
   min-width: 160px;
-  border: 1px solid #ccc;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   z-index: 1;
   margin-block-start: 8px;
   padding: 8px 0;
@@ -98,23 +95,7 @@
 }
 
 .dropdown-content a {
-  padding: 10px;
   display: block;
-  color: #333;
-  text-decoration: none;
-}
-
-.dropdown-content a:hover {
-  background-color: #f1f1f1;
-}
-
-.dropdown.open .dropdown-content {
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
-}
-
-.dropdown-content a {
   font-family: var(--font-main);
   font-size: 16px;
   line-height: 24px;
@@ -133,6 +114,9 @@
 
 .dropdown.open .dropdown-content {
   display: block;
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
 }
 
 .cards {
@@ -163,13 +147,13 @@
 
 .card:hover {
   transform: scale(1.03);
-  box-shadow: var(--shadow-default, 0 8px 20px rgba(0, 0, 0, 0.08));
+  box-shadow: var(--shadow-default, 0 8px 20px rgb(0 0 0 / 0.08));
 }
 
 .card:focus-visible {
   outline: 2px dashed var(--color-primary, #338ff2);
   outline-offset: 4px;
-  box-shadow: 0 0 0 4px rgba(51, 143, 242, 0.3);
+  box-shadow: 0 0 0 4px rgb(51 143 242 / 0.3);
 }
 
 .card__image {
@@ -204,6 +188,7 @@
 }
 
 @media (width <= 769px) {
+
   .cards {
     grid-template-columns: repeat(2, 1fr);
     column-gap: 20px;
@@ -232,6 +217,7 @@
 }
 
 @media (width <= 376px) {
+
   .main__title {
     font-size: 35px;
     line-height: 31px;
@@ -240,9 +226,6 @@
   .dropdown-content {
     left: 0;
     right: auto;
-  }
-
-  .dropdown-content {
     min-width: 100%;
     width: auto;
   }
