@@ -1,4 +1,5 @@
 @keyframes dropdown-fade {
+
   0% {
     opacity: 0;
     transform: translateY(-10px);
@@ -187,6 +188,7 @@
 }
 
 @media (width <= 769px) {
+
   .cards {
     grid-template-columns: repeat(2, 1fr);
     column-gap: 20px;
@@ -215,6 +217,7 @@
 }
 
 @media (width <= 376px) {
+
   .main__title {
     font-size: 35px;
     line-height: 31px;
