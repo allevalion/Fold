@@ -1,4 +1,5 @@
 .footer {
+  position: relative;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -55,4 +56,21 @@
 
 .footer__text {
   color: var(--color-light-text, #7a8ca8);
+}
+
+.footer__github {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  color: var(--color-secondary, #4a709c);
+  transition: var(--transition-default, all 0.3s ease);
+}
+
+.footer__github:hover {
+  color: var(--color-secondary-hover, #2a4b7c);
+}
+
+.footer__github-icon {
+  width: 45px;
+  height: 45px;
 }
