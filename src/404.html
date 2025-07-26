@@ -37,9 +37,7 @@
         <nav class="header__nav">
           <ul class="header__nav-list">
             <li class="header__nav-item">
-              <a href="#" class="header__nav-link header__nav-link_active"
-                >Home</a
-              >
+              <a href="./index.html" class="header__nav-link">Home</a>
             </li>
             <li class="header__nav-item">
               <a href="./shop.html" class="header__nav-link">Shop</a>
@@ -85,7 +83,7 @@
               </form>
             </li>
             <li class="header__nav-item">
-              <a href="#" class="header__nav-link header__nav-link_active">
+              <a href="./index.html" class="header__nav-link">
                 <svg
                   viewBox="0 0 20 20"
                   aria-hidden="true"
@@ -198,12 +196,38 @@
         </button>
       </div>
     </header>
-    <main class="main"></main>
+    <main class="main" role="main">
+      <section class="not-found">
+        <div class="not-found__content">
+          <svg
+            class="not-found__plane"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 100 125"
+          >
+            <path
+              fill="currentColor"
+              d="M78.125,89.375L52.998,75.017l-9.117,8.733L38.75,66.875L78.125,27.5L29.862,59.675L5,44.375l90-33.75L78.125,89.375z"
+            />
+          </svg>
+          <h1 class="not-found__title" tabindex="0">404</h1>
+          <p class="not-found__description">
+            The page you're looking for has flown away.
+          </p>
+          <div class="not-found__buttons">
+            <a href="./index.html" class="not-found__button">Go Home</a>
+            <a href="./secret.html" class="not-found__secret-button"
+              >Secret Way</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
     <footer class="footer" role="contentinfo">
       <nav class="footer__nav" aria-label="Footer navigation">
         <ul class="footer__nav-list">
           <li class="footer__nav-item">
-            <a href="#" class="footer__nav-link">Home</a>
+            <a href="./index.html" class="footer__nav-link">Home</a>
           </li>
           <li class="footer__nav-item">
             <a href="./shop.html" class="footer__nav-link">Shop</a>
