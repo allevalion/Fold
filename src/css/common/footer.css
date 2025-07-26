@@ -76,6 +76,7 @@
 }
 
 @media (width <= 376px) {
+
   .footer__github {
     position: static;
     margin-top: 8px;
