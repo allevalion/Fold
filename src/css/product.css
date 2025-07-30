@@ -1,31 +1,40 @@
 @keyframes jump-scale {
+
   0% {
     transform: scale(1);
   }
+
   25% {
     transform: scale(1.03);
   }
+
   50% {
     transform: scale(1);
   }
+
   100% {
     transform: scale(1.03);
   }
 }
 
 @keyframes heart-beat {
+
   0% {
     transform: scale(1);
   }
+
   25% {
     transform: scale(1.1);
   }
+
   50% {
     transform: scale(1);
   }
+
   75% {
     transform: scale(1.1);
   }
+
   100% {
     transform: scale(1);
   }
@@ -179,7 +188,7 @@
 
 .button:disabled {
   background-color: #c8d2e0;
-  color: #ffffff;
+  color: #fff;
   cursor: not-allowed;
   box-shadow: none;
 }
@@ -192,9 +201,9 @@
 
 .buy-button {
   margin: 16px 0;
-  color: #ffffff;
+  color: #fff;
   background-color: var(--color-primary);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
 }
 
 .buy-button:hover {
@@ -203,12 +212,6 @@
 
 .buy-button:active {
   background-color: var(--color-primary-active);
-}
-
-.buy-button:focus-visible {
-  outline: 2px dashed var(--color-primary);
-  outline-offset: 4px;
-  box-shadow: 0 0 0 4px rgb(51 143 242 / 0.3);
 }
 
 .buy-button:focus-visible {
@@ -320,7 +323,7 @@
   background-color: #fff;
   border-radius: var(--border-radius-medium);
   padding: 24px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
   transition: transform 0.3s ease;
 }
 
@@ -401,7 +404,7 @@
   max-width: 320px;
   background: #fff;
   border-radius: var(--border-radius-medium);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgb(0 0 0 / 0.1);
   transition: transform 0.3s ease;
   flex: 1 0 auto;
 }
@@ -463,6 +466,7 @@
 }
 
 @media (max-width: 1024px) {
+
   .main {
     padding: 0 1vw;
     padding-block-start: 95px;
@@ -470,6 +474,7 @@
 }
 
 @media (max-width: 768px) {
+
   .main {
     padding: 0 4vw;
     padding-block-start: 60px;
@@ -557,6 +562,7 @@
 }
 
 @media (max-width: 480px) {
+
   .main {
     padding: 0 2vw;
     padding-block-start: 75px;
@@ -676,6 +682,7 @@
 }
 
 @media (max-width: 375px) {
+
   .main {
     gap: 12px;
   }

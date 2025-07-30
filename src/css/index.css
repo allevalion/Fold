@@ -271,6 +271,7 @@
 }
 
 @media (width <= 769px) {
+
   .main {
     padding-top: 56px;
     gap: 24px;
@@ -339,6 +340,7 @@
 }
 
 @media (width <= 376px) {
+
   .main {
     padding-top: 48px;
     gap: 20px;
