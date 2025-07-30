@@ -1,5 +1,5 @@
 node_modules/
-src/css/variables.py
+*.py
 package.json
 package-lock.json
 stylelint.config.js
