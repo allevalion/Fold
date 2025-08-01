@@ -40,6 +40,10 @@ input {
   -moz-appearance: none;
 }
 
+input:-internal-autofill-selected {
+  background-color: unset;
+}
+
 ul,
 ol {
   list-style: none;
