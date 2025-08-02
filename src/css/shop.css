@@ -1,5 +1,4 @@
 @keyframes dropdown-fade {
-
   0% {
     opacity: 0;
     transform: translateY(-10px);
@@ -121,12 +120,13 @@
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
   column-gap: 39px;
   row-gap: 24px;
   justify-content: center;
-  inline-size: 100%;
-  max-width: calc(4 * 300px + 3 * 39px);
+  align-items: center;
+  inline-size: 95%;
+  max-width: calc(4 * 325px + 3 * 39px);
   margin: 0 auto;
 }
 
@@ -134,15 +134,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 300px;
+  max-width: 325px;
   inline-size: 100%;
-  min-height: 300px;
+  min-height: 325px;
   border-radius: var(--border-radius-medium, 16px);
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;
   padding: 12px;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .card:hover {
@@ -179,16 +180,70 @@
   margin-block: 4px 8px;
 }
 
-.card__price {
+.card__controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  width: 100%;
+}
+
+.card__controls-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 0;
   font-size: 14px;
   line-height: 21px;
   font-weight: var(--font-weight-regular, 400);
   color: var(--color-secondary, #4a709c);
-  align-self: start;
+}
+
+.card__controls-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: start;
+  align-self: end;
+  gap: 12px;
+  padding: 14px 28px;
+  font-family: var(--font-main);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.4;
+  margin: 0;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
+  color: #fff;
+  background-color: var(--color-primary);
+  box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
+}
+
+.card__controls-button:hover {
+  background-color: var(--color-primary-hover);
+}
+
+.card__controls-button:active {
+  background-color: var(--color-primary-active);
+}
+
+.card__controls-button:focus-visible {
+  outline: 2px dashed var(--color-primary);
+  outline-offset: 4px;
+  box-shadow: 0 0 0 4px rgb(51 143 242 / 0.3);
+}
+
+.card__controls-button svg {
+  width: var(--icon-size-large);
+  height: var(--icon-size-large);
+  fill: currentColor;
 }
 
 @media (width <= 769px) {
-
   .cards {
     grid-template-columns: repeat(2, 1fr);
     column-gap: 20px;
@@ -216,8 +271,7 @@
   }
 }
 
-@media (width <= 376px) {
-
+@media (width <= 480px) {
   .main__title {
     font-size: 35px;
     line-height: 31px;

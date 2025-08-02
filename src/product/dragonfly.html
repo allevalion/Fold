@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Fold: The Dragonfly</title>
+<link href="../css/common/reset.css" rel="stylesheet"/>
+<link href="../css/variables.css" rel="stylesheet"/>
+<link href="../css/common/header.css" rel="stylesheet"/>
+<link href="../css/common/footer.css" rel="stylesheet"/>
+<link href="../css/common/notifications.css" rel="stylesheet"/>
+<link href="../css/product.css" rel="stylesheet"/>
+</head>
+<body>
+<header class="header" role="banner">
+<div class="header__left">
+<div class="header__logo">
+<svg aria-hidden="true" class="header__logo-svg" enable-background="new 0 0 100 100" version="1.1" viewbox="0 0 100 125" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
+<path d="M78.125,89.375L52.998,75.017l-9.117,8.733L38.75,66.875L78.125,27.5L29.862,59.675L5,44.375l90-33.75  L78.125,89.375z" fill="#000000"></path>
+</svg>
+<span class="header__logo-text">Fold</span>
+</div>
+<nav class="header__nav">
+<ul class="header__nav-list">
+<li class="header__nav-item">
+<a class="header__nav-link" href="../index.html">Home</a>
+</li>
+<li class="header__nav-item">
+<a class="header__nav-link" href="../shop.html">Shop</a>
+</li>
+<li class="header__nav-item">
+<a class="header__nav-link" href="../about.html">About</a>
+</li>
+<li class="header__nav-item">
+<a class="header__nav-link" href="../contact.html">Contact</a>
+</li>
+</ul>
+</nav>
+<nav class="header__mobile-nav" id="mobile-menu">
+<ul class="header__mobile-nav-list">
+<li class="header__nav-item header__mobile-search">
+<form class="header__search" role="search">
+<svg aria-hidden="true" class="header__search-icon" fill="none" height="20" viewbox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M19.5306 18.4694L14.8366 13.7762C17.6629 10.383 17.3204 5.36693 14.0591 2.38935C10.7978 -0.588237 5.77134 -0.474001 2.64867 2.64867C-0.474001 5.77134 -0.588237 10.7978 2.38935 14.0591C5.36693 17.3204 10.383 17.6629 13.7762 14.8366L18.4694 19.5306C18.7624 19.8237 19.2376 19.8237 19.5306 19.5306C19.8237 19.2376 19.8237 18.7624 19.5306 18.4694ZM1.75 8.5C1.75 4.77208 4.77208 1.75 8.5 1.75C12.2279 1.75 15.25 4.77208 15.25 8.5C15.25 12.2279 12.2279 15.25 8.5 15.25C4.77379 15.2459 1.75413 12.2262 1.75 8.5Z" fill="#4A709C" fill-rule="evenodd"></path>
+</svg>
+<label class="visually-hidden" for="mobile-search">Search</label>
+<input class="header__search-input" id="mobile-search" name="search" placeholder="Search" type="text"/>
+</form>
+</li>
+<li class="header__nav-item">
+<a class="header__nav-link" href="../index.html">
+<svg aria-hidden="true" class="header__nav-link-icon" viewbox="0 0 20 20">
+<path clip-rule="evenodd" d="M18.25 0.75H1.75C0.921573 0.75 0.25 1.42157 0.25 2.25V15.75C0.25 16.5784 0.921573 17.25 1.75 17.25H18.25C19.0784 17.25 19.75 16.5784 19.75 15.75V2.25C19.75 1.42157 19.0784 0.75 18.25 0.75ZM18.25 15.75H1.75V2.25H18.25V15.75ZM14.5 5.25C14.5 7.73528 12.4853 9.75 10 9.75C7.51472 9.75 5.5 7.73528 5.5 5.25C5.5 4.83579 5.83579 4.5 6.25 4.5C6.66421 4.5 7 4.83579 7 5.25C7 6.90685 8.34315 8.25 10 8.25C11.6569 8.25 13 6.90685 13 5.25C13 4.83579 13.3358 4.5 13.75 4.5C14.1642 4.5 14.5 4.83579 14.5 5.25Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+                Home</a>
+</li>
+<li class="header__nav-item">
+<a class="header__nav-link" href="../shop.html">
+<svg aria-hidden="true" class="header__nav-link-icon" viewbox="0 0 20 20">
+<path clip-rule="evenodd" d="M17.5153 7.72844L10.0153 0.652188C10.0116 0.648989 10.0082 0.645543 10.005 0.641875C9.43281 0.121501 8.55876 0.121501 7.98656 0.641875L7.97625 0.652188L0.484688 7.72844C0.17573 8.01254 -6.38962e-05 8.41309 0 8.83281V17.5C0 18.3284 0.671573 19 1.5 19H6C6.82843 19 7.5 18.3284 7.5 17.5V13H10.5V17.5C10.5 18.3284 11.1716 19 12 19H16.5C17.3284 19 18 18.3284 18 17.5V8.83281C18.0001 8.41309 17.8243 8.01254 17.5153 7.72844ZM16.5 17.5H12V13C12 12.1716 11.3284 11.5 10.5 11.5H7.5C6.67157 11.5 6 12.1716 6 13V17.5H1.5V8.83281L1.51031 8.82344L9 1.75L16.4906 8.82156L16.5009 8.83094L16.5 17.5Z" fill="currentColor" fill-rule="evenodd"></path></svg>Shop</a>
+</li>
+<li class="header__nav-item">
+<a class="header__nav-link" href="../about.html">
+<svg aria-hidden="true" class="header__nav-link-icon" viewbox="0 0 20 20">
+<path clip-rule="evenodd" d="M10 0.25C4.61522 0.25 0.25 4.61522 0.25 10C0.25 15.3848 4.61522 19.75 10 19.75C15.3848 19.75 19.75 15.3848 19.75 10C19.7443 4.61758 15.3824 0.255684 10 0.25ZM10 18.25C5.44365 18.25 1.75 14.5563 1.75 10C1.75 5.44365 5.44365 1.75 10 1.75C14.5563 1.75 18.25 5.44365 18.25 10C18.2448 14.5542 14.5542 18.2448 10 18.25ZM11.5 14.5C11.5 14.9142 11.1642 15.25 10.75 15.25C9.92157 15.25 9.25 14.5784 9.25 13.75V10C8.83579 10 8.5 9.66421 8.5 9.25C8.5 8.83579 8.83579 8.5 9.25 8.5C10.0784 8.5 10.75 9.17157 10.75 10V13.75C11.1642 13.75 11.5 14.0858 11.5 14.5ZM8.5 5.875C8.5 5.25368 9.00368 4.75 9.625 4.75C10.2463 4.75 10.75 5.25368 10.75 5.875C10.75 6.49632 10.2463 7 9.625 7C9.00368 7 8.5 6.49632 8.5 5.875Z" fill="#0F141A" fill-rule="evenodd"></path></svg>About</a>
+</li>
+<li class="header__nav-item">
+<a class="header__nav-link" href="../contact.html">
+<svg aria-hidden="true" class="header__nav-link-icon" viewbox="0 0 20 16">
+<path clip-rule="evenodd" d="M19 0.5H1C0.585786 0.5 0.25 0.835786 0.25 1.25V14C0.25 14.8284 0.921573 15.5 1.75 15.5H18.25C19.0784 15.5 19.75 14.8284 19.75 14V1.25C19.75 0.835786 19.4142 0.5 19 0.5ZM10 8.48281L2.92844 2H17.0716L10 8.48281ZM7.25406 8L1.75 13.0447V2.95531L7.25406 8ZM8.36406 9.01719L9.48906 10.0531C9.77592 10.3165 10.2166 10.3165 10.5034 10.0531L11.6284 9.01719L17.0659 14H2.92844L8.36406 9.01719ZM12.7459 8L18.25 2.95437V13.0456L12.7459 8Z" fill="#0F141A" fill-rule="evenodd"></path></svg>Contact</a>
+</li>
+</ul>
+</nav>
+</div>
+<div class="header__right">
+<div class="header__search" role="search">
+<svg aria-hidden="true" class="header__search-icon" fill="none" height="20" viewbox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M19.5306 18.4694L14.8366 13.7762C17.6629 10.383 17.3204 5.36693 14.0591 2.38935C10.7978 -0.588237 5.77134 -0.474001 2.64867 2.64867C-0.474001 5.77134 -0.588237 10.7978 2.38935 14.0591C5.36693 17.3204 10.383 17.6629 13.7762 14.8366L18.4694 19.5306C18.7624 19.8237 19.2376 19.8237 19.5306 19.5306C19.8237 19.2376 19.8237 18.7624 19.5306 18.4694ZM1.75 8.5C1.75 4.77208 4.77208 1.75 8.5 1.75C12.2279 1.75 15.25 4.77208 15.25 8.5C15.25 12.2279 12.2279 15.25 8.5 15.25C4.77379 15.2459 1.75413 12.2262 1.75 8.5Z" fill="#4A709C" fill-rule="evenodd"></path>
+</svg>
+<label class="visually-hidden" for="search">Search</label>
+<input autocomplete="off" class="header__search-input" id="search" name="search" placeholder="Search" type="text"/>
+</div>
+<div class="header__buttons">
+<button aria-label="View favorites" class="header__button" onclick="location.href='../cart.html#favorites'">
+<svg aria-hidden="true" class="header__button-icon" fill="none" stroke="currentColor" stroke-width="0.5" viewbox="0 0 22 18" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M15.6875 0C13.7516 0 12.0566 0.8325 11 2.23969C9.94344 0.8325 8.24844 0 6.3125 0C3.10384 0.00361657 0.503617 2.60384 0.5 5.8125C0.5 12.375 10.2303 17.6869 10.6447 17.9062C10.8665 18.0256 11.1335 18.0256 11.3553 17.9062C11.7697 17.6869 21.5 12.375 21.5 5.8125C21.4964 2.60384 18.8962 0.00361657 15.6875 0ZM11 16.3875C9.28813 15.39 2 10.8459 2 5.8125C2.0031 3.43206 3.93206 1.5031 6.3125 1.5C8.13594 1.5 9.66687 2.47125 10.3062 4.03125C10.4218 4.31259 10.6959 4.49627 11 4.49627C11.3041 4.49627 11.5782 4.31259 11.6938 4.03125C12.3331 2.46844 13.8641 1.5 15.6875 1.5C18.0679 1.5031 19.9969 3.43206 20 5.8125C20 10.8384 12.71 15.3891 11 16.3875Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</button>
+<button aria-label="View cart" class="header__button" onclick="location.href='../cart.html'">
+<svg aria-hidden="true" class="header__button-icon">
+<use href="../assets/svg/cart.svg#cart"></use>
+</svg>
+</button>
+</div>
+<button aria-controls="mobile-menu" aria-expanded="false" aria-label="Menu" class="header__burger">
+<span class="header__burger-line"></span>
+<span class="header__burger-line"></span>
+<span class="header__burger-line"></span>
+</button>
+</div>
+</header>
+<main class="main" role="main">
+<section class="product">
+<div class="product__media">
+<img alt="" class="product__main-image" src="../assets/img/card-images/artistic-planes/mythic-artistic.png"/>
+</div>
+<div class="product__info">
+<h1 class="section__title">The Dragonfly</h1>
+<p class="product__tagline">Art that flies</p>
+<div class="product__details">
+<div class="product__category">
+<span class="product__category-title">Category</span>
+<span class="product__category-name">Artistic Planes</span>
+</div>
+<div class="product__type">
+<span class="product__type-title">Type</span>
+<span class="product__type-name">Mythic</span>
+</div>
+<div class="product__description">
+<p class="product__description-text">
+                Delicate double-wing design with intricate patterns. Floats gently
+            like its insect namesake with surprising durability.
+              </p>
+</div>
+<div class="product__price">
+<span class="product__price-text">$16.99</span>
+</div>
+<div class="product__quantity">
+<label class="product__quantity-label" for="quantity">Quantity:</label>
+<div class="quantity-controls">
+<button aria-label="Decrease quantity" class="quantity-button" type="button">
+                  −
+                </button>
+<input aria-atomic="true" aria-live="polite" class="quantity-input" id="quantity" inputmode="numeric" max="99" min="1" name="quantity" type="number" value="1"/>
+<button aria-label="Increase quantity" class="quantity-button" type="button">
+                  +
+                </button>
+</div>
+</div>
+</div>
+<button class="button buy-button" type="button">
+<svg aria-hidden="true" class="buy-button__icon" viewbox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M17.3547 3.59922C17.2359 3.45709 17.0602 3.37497 16.875 3.375H4.27187L3.88984 1.27656C3.78186 0.682187 3.26426 0.250087 2.66016 0.25H1.25C0.904822 0.25 0.625 0.529822 0.625 0.875C0.625 1.22018 0.904822 1.5 1.25 1.5H2.65625L4.65312 12.4602C4.71195 12.7852 4.8556 13.0889 5.06953 13.3406C4.24996 14.1061 4.14205 15.3674 4.81967 16.261C5.49729 17.1546 6.74093 17.391 7.69916 16.8084C8.6574 16.2257 9.01981 15.0128 8.53828 14H12.0867C11.9469 14.2927 11.8745 14.6131 11.875 14.9375C11.875 16.1456 12.8544 17.125 14.0625 17.125C15.2706 17.125 16.25 16.1456 16.25 14.9375C16.25 13.7294 15.2706 12.75 14.0625 12.75H6.49766C6.1956 12.75 5.9368 12.5339 5.88281 12.2367L5.63516 10.875H14.6977C15.6038 10.8749 16.3802 10.2267 16.5422 9.33516L17.4922 4.11172C17.5247 3.92894 17.4744 3.74115 17.3547 3.59922ZM7.5 14.9375C7.5 15.4553 7.08027 15.875 6.5625 15.875C6.04473 15.875 5.625 15.4553 5.625 14.9375C5.625 14.4197 6.04473 14 6.5625 14C7.08027 14 7.5 14.4197 7.5 14.9375ZM15 14.9375C15 15.4553 14.5803 15.875 14.0625 15.875C13.5447 15.875 13.125 15.4553 13.125 14.9375C13.125 14.4197 13.5447 14 14.0625 14C14.5803 14 15 14.4197 15 14.9375ZM15.3125 9.11172C15.2584 9.40978 14.9982 9.62609 14.6953 9.625H5.40781L4.49922 4.625H16.1258L15.3125 9.11172Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+            Add to Cart
+          </button>
+<button class="button favorite-button" type="button">
+<svg class="favorite-button__icon" fill="none" height="18" stroke="#0F141A" stroke-width="0.5" viewbox="0 0 22 18" width="22" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M15.6875 0C13.7516 0 12.0566 0.8325 11 2.23969C9.94344 0.8325 8.24844 0 6.3125 0C3.10384 0.00361657 0.503617 2.60384 0.5 5.8125C0.5 12.375 10.2303 17.6869 10.6447 17.9062C10.8665 18.0256 11.1335 18.0256 11.3553 17.9062C11.7697 17.6869 21.5 12.375 21.5 5.8125C21.4964 2.60384 18.8962 0.00361657 15.6875 0ZM11 16.3875C9.28813 15.39 2 10.8459 2 5.8125C2.0031 3.43206 3.93206 1.5031 6.3125 1.5C8.13594 1.5 9.66687 2.47125 10.3062 4.03125C10.4218 4.31259 10.6959 4.49627 11 4.49627C11.3041 4.49627 11.5782 4.31259 11.6938 4.03125C12.3331 2.46844 13.8641 1.5 15.6875 1.5C18.0679 1.5031 19.9969 3.43206 20 5.8125C20 10.8384 12.71 15.3891 11 16.3875Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+<span class="favorite-button__text">Favorite</span>
+</button>
+</div>
+</section>
+<section class="specs">
+<h2 class="section__title">Specifications</h2>
+<ul class="specs-list">
+<li class="specs-list__item">
+<svg class="specs-list__item-icon" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+<path d="M2 32 C10 16, 24 16, 32 32 C40 16, 54 16, 62 32"></path>
+<path d="M32 32 L32 50"></path>
+</svg>
+<span class="specs-list__name">Wingspan</span>
+<span class="specs-list__value">14 cm</span>
+</li>
+<li class="specs-list__item">
+<svg class="specs-list__item-icon" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+<rect height="16" rx="2" width="56" x="4" y="24"></rect>
+<path d="M12 24 V32"></path>
+<path d="M20 24 V32"></path>
+<path d="M28 24 V32"></path>
+<path d="M36 24 V32"></path>
+<path d="M44 24 V32"></path>
+<path d="M52 24 V32"></path>
+</svg>
+<span class="specs-list__name">Length</span>
+<span class="specs-list__value">14 cm</span>
+</li>
+<li class="specs-list__item">
+<svg class="specs-list__item-icon" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+<circle cx="32" cy="32" r="18"></circle>
+<rect fill="currentColor" height="8" rx="2" stroke="none" width="12" x="26" y="6"></rect>
+</svg>
+<span class="specs-list__name">Weight</span>
+<span class="specs-list__value">6 g</span>
+</li>
+<li class="specs-list__item">
+<svg class="specs-list__item-icon" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+<path d="M8 32 H48"></path>
+<path d="M40 24 L56 32 L40 40" fill="currentColor"></path>
+</svg>
+<span class="specs-list__name">Top Speed</span>
+<span class="specs-list__value">14 m/s</span>
+</li>
+<li class="specs-list__item">
+<svg class="specs-list__item-icon" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 48 Q32 4, 60 48"></path>
+<circle cx="60" cy="48" fill="currentColor" r="2"></circle>
+</svg>
+<span class="specs-list__name">Flight Range</span>
+<span class="specs-list__value">30 m</span>
+</li>
+</ul>
+</section>
+<section class="reviews">
+<h2 class="section__title">What People Say</h2>
+<div class="reviews-container">
+<article class="review" itemscope="" itemtype="https://schema.org/Review">
+<div class="review__rating" itemprop="reviewRating" itemscope="" itemtype="https://schema.org/Rating">
+<meta content="5" itemprop="ratingValue"/>
+<div class="stars">
+<svg aria-hidden="true" fill="currentColor" viewbox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg><svg aria-hidden="true" fill="currentColor" viewbox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg><svg aria-hidden="true" fill="currentColor" viewbox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg><svg aria-hidden="true" fill="currentColor" viewbox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg><svg aria-hidden="true" fill="currentColor" viewbox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+</div>
+</div>
+<h3 class="review__title" itemprop="name">Worth every penny</h3>
+<p class="review__text" itemprop="reviewBody">The craftsmanship is excellent and the flight performance is outstanding. I'll be buying more!</p>
+<div class="review__author">
+<span itemprop="author">Olivia W.</span>
+<time datetime="2024-10-28" itemprop="datePublished">October 28, 2024</time>
+</div>
+</article>
+<article class="review" itemscope="" itemtype="https://schema.org/Review">
+<div class="review__rating" itemprop="reviewRating" itemscope="" itemtype="https://schema.org/Rating">
+<meta content="5" itemprop="ratingValue"/>
+<div class="stars">
+<svg aria-hidden="true" fill="currentColor" viewbox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg><svg aria-hidden="true" fill="currentColor" viewbox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg><svg aria-hidden="true" fill="currentColor" viewbox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg><svg aria-hidden="true" fill="currentColor" viewbox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg><svg aria-hidden="true" fill="currentColor" viewbox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+</div>
+</div>
+<h3 class="review__title" itemprop="name">Amazing performance!</h3>
+<p class="review__text" itemprop="reviewBody">This plane flies incredibly well! It's fast, stable and looks great. Definitely worth the price.</p>
+<div class="review__author">
+<span itemprop="author">John D.</span>
+<time datetime="2025-01-05" itemprop="datePublished">January 05, 2025</time>
+</div>
+</article>
+<article class="review" itemscope="" itemtype="https://schema.org/Review">
+<div class="review__rating" itemprop="reviewRating" itemscope="" itemtype="https://schema.org/Rating">
+<meta content="5" itemprop="ratingValue"/>
+<div class="stars">
+<svg aria-hidden="true" fill="currentColor" viewbox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg><svg aria-hidden="true" fill="currentColor" viewbox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg><svg aria-hidden="true" fill="currentColor" viewbox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg><svg aria-hidden="true" fill="currentColor" viewbox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg><svg aria-hidden="true" fill="currentColor" viewbox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+</div>
+</div>
+<h3 class="review__title" itemprop="name">My new favorite!</h3>
+<p class="review__text" itemprop="reviewBody">I've tried many paper airplanes and this one is by far the best. The balance is perfect for long flights.</p>
+<div class="review__author">
+<span itemprop="author">Jessica L.</span>
+<time datetime="2025-05-21" itemprop="datePublished">May 21, 2025</time>
+</div>
+</article>
+</div>
+<button class="button buy-button" type="button">
+<svg aria-hidden="true" class="buy-button__icon" viewbox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M17.3547 3.59922C17.2359 3.45709 17.0602 3.37497 16.875 3.375H4.27187L3.88984 1.27656C3.78186 0.682187 3.26426 0.250087 2.66016 0.25H1.25C0.904822 0.25 0.625 0.529822 0.625 0.875C0.625 1.22018 0.904822 1.5 1.25 1.5H2.65625L4.65312 12.4602C4.71195 12.7852 4.8556 13.0889 5.06953 13.3406C4.24996 14.1061 4.14205 15.3674 4.81967 16.261C5.49729 17.1546 6.74093 17.391 7.69916 16.8084C8.6574 16.2257 9.01981 15.0128 8.53828 14H12.0867C11.9469 14.2927 11.8745 14.6131 11.875 14.9375C11.875 16.1456 12.8544 17.125 14.0625 17.125C15.2706 17.125 16.25 16.1456 16.25 14.9375C16.25 13.7294 15.2706 12.75 14.0625 12.75H6.49766C6.1956 12.75 5.9368 12.5339 5.88281 12.2367L5.63516 10.875H14.6977C15.6038 10.8749 16.3802 10.2267 16.5422 9.33516L17.4922 4.11172C17.5247 3.92894 17.4744 3.74115 17.3547 3.59922ZM7.5 14.9375C7.5 15.4553 7.08027 15.875 6.5625 15.875C6.04473 15.875 5.625 15.4553 5.625 14.9375C5.625 14.4197 6.04473 14 6.5625 14C7.08027 14 7.5 14.4197 7.5 14.9375ZM15 14.9375C15 15.4553 14.5803 15.875 14.0625 15.875C13.5447 15.875 13.125 15.4553 13.125 14.9375C13.125 14.4197 13.5447 14 14.0625 14C14.5803 14 15 14.4197 15 14.9375ZM15.3125 9.11172C15.2584 9.40978 14.9982 9.62609 14.6953 9.625H5.40781L4.49922 4.625H16.1258L15.3125 9.11172Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+          Add to Cart
+        </button>
+</section>
+<section class="recommended">
+<h2 class="section__title">You Might Also Like</h2>
+<div class="recommended__container">
+<article class="product-card">
+<a class="product-card__link" href="./condor.html" tabindex="0">
+<img alt="" class="product-card__image" src="../assets/img/card-images/classic-gliders/dayflight-classic.png"/>
+<div class="product-card__info">
+<h3 class="product-card__title">The Condor</h3>
+<p class="product-card__description">Large wingspan for maximum airtime. Floats gracefully on thermal
+            currents, ideal for park flying and competitions.</p>
+<div class="product-card__price">$19.99</div>
+</div>
+</a>
+</article>
+<article class="product-card">
+<a class="product-card__link" href="./cloudsurfer.html" tabindex="0">
+<img alt="" class="product-card__image" src="../assets/img/card-images/classic-gliders/dayflight-classic.png"/>
+<div class="product-card__info">
+<h3 class="product-card__title">The Cloudsurfer</h3>
+<p class="product-card__description">Extra-wide wings catch thermals effortlessly. Perfect for lazy
+            afternoon flights that seem to last forever.</p>
+<div class="product-card__price">$17.50</div>
+</div>
+</a>
+</article>
+<article class="product-card">
+<a class="product-card__link" href="./thunderbolt.html" tabindex="0">
+<img alt="" class="product-card__image" src="../assets/img/card-images/high-speed/shadow-high-speed.png"/>
+<div class="product-card__info">
+<h3 class="product-card__title">The Thunderbolt</h3>
+<p class="product-card__description">Zigzag lightning patterns adorn this speedster. Delivers rapid
+            acceleration and dramatic diving capability.</p>
+<div class="product-card__price">$21.25</div>
+</div>
+</a>
+</article>
+<article class="product-card">
+<a class="product-card__link" href="./hummingbird.html" tabindex="0">
+<img alt="" class="product-card__image" src="../assets/img/card-images/classic-gliders/dayflight-classic.png"/>
+<div class="product-card__info">
+<h3 class="product-card__title">The Hummingbird</h3>
+<p class="product-card__description">Tiny but mighty with rapid wing beats in flight. Perfect for indoor
+            acrobatics and tight space maneuvers.</p>
+<div class="product-card__price">$14.25</div>
+</div>
+</a>
+</article>
+<article class="product-card">
+<a class="product-card__link" href="./winddancer.html" tabindex="0">
+<img alt="" class="product-card__image" src="../assets/img/card-images/artistic-planes/mythic-artistic.png"/>
+<div class="product-card__info">
+<h3 class="product-card__title">The Winddancer</h3>
+<p class="product-card__description">Fluted wing edges create mesmerizing flight patterns. Appears to
+            dance on wind currents with elegant spirals.</p>
+<div class="product-card__price">$18.75</div>
+</div>
+</a>
+</article>
+<article class="product-card">
+<a class="product-card__link" href="./origami.html" tabindex="0">
+<img alt="" class="product-card__image" src="../assets/img/card-images/classic-gliders/dayflight-classic.png"/>
+<div class="product-card__info">
+<h3 class="product-card__title">The Origami</h3>
+<p class="product-card__description">Traditional Japanese folding techniques meet modern aerodynamics.
+            Beautiful crease patterns that perform surprisingly well.</p>
+<div class="product-card__price">$15.99</div>
+</div>
+</a>
+</article>
+</div>
+</section>
+</main>
+<footer class="footer" role="contentinfo">
+<nav aria-label="Footer navigation" class="footer__nav">
+<ul class="footer__nav-list">
+<li class="footer__nav-item">
+<a class="footer__nav-link" href="../index.html">Home</a>
+</li>
+<li class="footer__nav-item">
+<a class="footer__nav-link" href="../shop.html">Shop</a>
+</li>
+<li class="footer__nav-item">
+<a class="footer__nav-link" href="../about.html">About</a>
+</li>
+<li class="footer__nav-item">
+<a class="footer__nav-link" href="../contact.html">Contact</a>
+</li>
+</ul>
+</nav>
+<p class="footer__text">© 2025 Fold. All rights reserved.</p>
+<a class="footer__github" href="https://github.com/allevalion/Fold" rel="noopener noreferrer" target="_blank">
+<svg height="45" viewbox="0 0 98 96" width="45" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</a>
+</footer>
+<div aria-atomic="true" aria-live="polite" class="notification-container"></div>
+<script src="../js/product.js" type="module"></script>
+<script src="../js/common/header.js"></script>
+</body>
+</html>

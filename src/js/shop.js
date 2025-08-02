@@ -1,3 +1,6 @@
+import { showNotification } from './common/notifications.js';
+import { updateCartCount, addToCart } from './utils/cartUtils.js';
+
 document.addEventListener('DOMContentLoaded', () => {
   const revealElements = document.querySelectorAll('.card');
 
@@ -18,6 +21,27 @@ document.addEventListener('DOMContentLoaded', () => {
   revealElements.forEach((el) => {
     el.classList.add('fade-in');
     observer.observe(el);
+  });
+
+  document.querySelectorAll('.card__controls-button').forEach((button) => {
+    button.addEventListener('click', (e) => {
+      e.preventDefault();
+      const card = button.closest('.card');
+      const product = {
+        id: card.getAttribute('href').split('/').pop().replace('.html', ''),
+        name: card.querySelector('.card__name').textContent,
+        description: card.querySelector('.card__description').textContent,
+        price: parseFloat(
+          card.querySelector('.card__price').textContent.replace('$', '')
+        ),
+        image: card.querySelector('.card__image').src,
+        quantity: 1,
+        category:
+          card.querySelector('.card__category')?.textContent || 'Uncategorized',
+      };
+      addToCart(product);
+      showNotification(`${product.name} added to cart!`);
+    });
   });
 });
 
@@ -74,3 +98,5 @@ document.querySelectorAll('.dropdown').forEach((dropdown) => {
     });
   });
 });
+
+updateCartCount();

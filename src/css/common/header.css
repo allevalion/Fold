@@ -24,7 +24,6 @@
   align-items: center;
   gap: var(--gap-small, 8px);
   transition: var(--transition-default, all 0.3s ease);
-  cursor: pointer;
 }
 
 .header__logo:hover {
