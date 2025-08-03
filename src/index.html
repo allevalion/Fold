@@ -347,78 +347,103 @@
           Explore our curated collection of handcrafted paper airplanes,
           meticulously designed for optimal flight performance and endless fun.
         </p>
-        <button class="button hero__button">Shop Now</button>
+        <button
+          class="button hero__button"
+          type="button"
+          onclick="location.href='./shop.html'"
+        >
+          Shop Now
+        </button>
       </section>
       <section class="categories">
         <h2 class="section__title">Categories</h2>
         <div class="categories__list">
-          <div class="categories__item" tabindex="0">
+          <a
+            href="./shop.html?category=Classic Gliders"
+            class="categories__item"
+            tabindex="0"
+          >
             <img
-              src="./assets/img/card-placeholder.png"
-              alt="Category 1"
+              loading="lazy"
+              src="./assets/img/card-images/classic-gliders/dayflight-classic.png"
+              alt=""
               class="categories__image"
             />
             <h3 class="categories__name card__text">Classic Gliders</h3>
-          </div>
-          <div class="categories__item" tabindex="0">
+          </a>
+          <a
+            href="./shop.html?category=Artistic Planes"
+            class="categories__item"
+            tabindex="0"
+          >
             <img
-              src="./assets/img/card-placeholder.png"
-              alt="Category 2"
+              loading="lazy"
+              src="./assets/img/card-images/artistic-planes/mythic-artistic.png"
+              alt=""
               class="categories__image"
             />
             <h3 class="categories__name card__text">Artistic Planes</h3>
-          </div>
-          <div class="categories__item" tabindex="0">
+          </a>
+          <a
+            href="./shop.html?category=High-Speed"
+            class="categories__item"
+            tabindex="0"
+          >
             <img
-              src="./assets/img/card-placeholder.png"
-              alt="Category 3"
+              loading="lazy"
+              src="./assets/img/card-images/high-speed/shadow-high-speed.png"
+              alt=""
               class="categories__image"
             />
             <h3 class="categories__name card__text">High-Speed Models</h3>
-          </div>
+          </a>
         </div>
       </section>
       <section class="products">
         <h2 class="section__title">Featured Products</h2>
         <div class="products__list">
-          <div class="products__item" tabindex="0">
+          <a href="./product/condor.html" class="products__item" tabindex="0">
             <img
-              src="./assets/img/card-placeholder.png"
-              alt="Product 1"
+              loading="lazy"
+              src="./assets/img/card-images/classic-gliders/dayflight-classic.png"
+              alt=""
               class="products__image"
             />
-            <h3 class="products__name card__text">Speedster 3000</h3>
+            <h3 class="products__name card__text">The Condor</h3>
             <p class="products__price card__text">$19.99</p>
-          </div>
-          <div class="products__item" tabindex="0">
+          </a>
+          <a href="./product/falcon.html" class="products__item" tabindex="0">
             <img
-              src="./assets/img/card-placeholder.png"
-              alt="Product 1"
+              loading="lazy"
+              src="./assets/img/card-images/high-speed/shadow-high-speed.png"
+              alt=""
               class="products__image"
             />
-            <h3 class="products__name card__text">Speedster 3000</h3>
-            <p class="products__price card__text">$19.99</p>
-          </div>
-          <div class="products__item" tabindex="0">
+            <h3 class="products__name card__text">The Falcon</h3>
+            <p class="products__price card__text">$22.99</p>
+          </a>
+          <a href="./product/phoenix.html" class="products__item" tabindex="0">
             <img
-              src="./assets/img/card-placeholder.png"
-              alt="Product 1"
+              loading="lazy"
+              src="./assets/img/card-images/artistic-planes/mythic-artistic.png"
+              alt=""
               class="products__image"
             />
-            <h3 class="products__name card__text">Speedster 3000</h3>
-            <p class="products__price card__text">$19.99</p>
-          </div>
-          <div class="products__item" tabindex="0">
+            <h3 class="products__name card__text">The Phoenix</h3>
+            <p class="products__price card__text">$20.99</p>
+          </a>
+          <a href="./product/aether.html" class="products__item" tabindex="0">
             <img
-              src="./assets/img/card-placeholder.png"
-              alt="Product 1"
+              loading="lazy"
+              src="./assets/img/card-images/artistic-planes/mythic-artistic.png"
+              alt=""
               class="products__image"
             />
-            <h3 class="products__name card__text">Speedster 3000</h3>
-            <p class="products__price card__text">$19.99</p>
-          </div>
+            <h3 class="products__name card__text">The Aether</h3>
+            <p class="products__price card__text">$25.99</p>
+          </a>
         </div>
-        <a href="#" class="products__link">
+        <a href="./shop.html" class="products__link">
           Browse Full Collection
           <svg
             viewBox="0 0 24 24"

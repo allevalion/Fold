@@ -168,6 +168,7 @@
 
 .categories__item,
 .products__item {
+  text-decoration: none;
   border-radius: var(--border-radius-medium, 16px);
   transition:
     transform 0.3s ease,
@@ -271,7 +272,6 @@
 }
 
 @media (width <= 769px) {
-
   .main {
     padding-top: 56px;
     gap: 24px;
@@ -339,8 +339,7 @@
   }
 }
 
-@media (width <= 376px) {
-
+@media (width <= 480px) {
   .main {
     padding-top: 48px;
     gap: 20px;

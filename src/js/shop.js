@@ -8,6 +8,34 @@ document.addEventListener('DOMContentLoaded', () => {
   const resetButton = document.querySelector('.reset-button');
   const resetButtons = document.querySelectorAll('#reset-filters-button');
   const noResultsSection = document.getElementById('no-results');
+  const urlParams = new URLSearchParams(window.location.search);
+  const filters = {
+    category: urlParams.get('category') || null,
+    type: urlParams.get('type') || null,
+    price: urlParams.get('price') || null,
+  };
+
+  applyFilters();
+
+  ['category', 'type', 'price'].forEach((key) => {
+    if (filters[key]) {
+      const button = document.querySelector(
+        `#dropdown-${key} .dropdown-button`
+      );
+      button.querySelector('.dropdown-button__text').textContent =
+        `${key.charAt(0).toUpperCase() + key.slice(1)}: ${filters[key]}`;
+      button.classList.add('active');
+    }
+  });
+
+  if (filters.category) {
+    const categoryButton = document.querySelector(
+      '#dropdown-category .dropdown-button'
+    );
+    categoryButton.querySelector('.dropdown-button__text').textContent =
+      `Category: ${filters.category}`;
+    categoryButton.classList.add('active');
+  }
 
   const observer = new IntersectionObserver(
     (entries) => {
@@ -46,12 +74,6 @@ document.addEventListener('DOMContentLoaded', () => {
       showNotification(`${product.name} added to cart!`);
     });
   });
-
-  const filters = {
-    category: null,
-    type: null,
-    price: null,
-  };
 
   function applyFilters() {
     const hasFilters = Object.values(filters).some((filter) => filter !== null);
@@ -143,6 +165,15 @@ document.addEventListener('DOMContentLoaded', () => {
         dropdown.classList.remove('open');
         button.setAttribute('aria-expanded', 'false');
 
+        const newParams = new URLSearchParams();
+
+        Object.entries(filters).forEach(([key, value]) => {
+          if (value) newParams.set(key, value);
+        });
+
+        const newUrl = `${window.location.pathname}?${newParams.toString()}`;
+        window.history.replaceState({}, '', newUrl);
+
         applyFilters();
       });
     });
@@ -170,6 +201,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
 
       applyFilters();
+      window.history.replaceState({}, '', window.location.pathname);
     });
   });
 
