@@ -106,5 +106,11 @@
     "category": "High-Speed",
     "url": "product/zenith.html",
     "popular": true
+  },
+  {
+    "name": "The Aether",
+    "category": "Artistic Planes",
+    "url": "product/aether.html",
+    "popular": true
   }
 ]
