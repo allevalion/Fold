@@ -354,7 +354,7 @@
             aria-haspopup="listbox"
             class="dropdown-button"
           >
-            Category
+            <span class="dropdown-button__text">Category</span>
             <svg
               class="dropdown-button__icon"
               fill="currentColor"
@@ -395,7 +395,7 @@
             aria-haspopup="listbox"
             class="dropdown-button"
           >
-            Type
+            <span class="dropdown-button__text">Type</span>
             <svg
               class="dropdown-button__icon"
               fill="currentColor"
@@ -436,7 +436,7 @@
             aria-haspopup="listbox"
             class="dropdown-button"
           >
-            Price
+            <span class="dropdown-button__text">Price</span>
             <svg
               class="dropdown-button__icon"
               fill="currentColor"
@@ -469,6 +469,9 @@
             <a href="#" role="option">Low to High</a>
           </div>
         </div>
+        <button class="reset-button" id="reset-filters-button">
+          Reset Filters
+        </button>
       </section>
       <section class="cards">
         <a class="card" href="./product/falcon.html" tabindex="0">
@@ -1291,6 +1294,51 @@
             </button>
           </div>
         </a>
+      </section>
+      <section class="no-results" id="no-results" style="display: none">
+        <div class="no-results__content">
+          <svg
+            class="no-results__icon"
+            width="48"
+            height="48"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M8 16C8 16 9.5 14 12 14C14.5 14 16 16 16 16"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+            <circle
+              cx="12"
+              cy="12"
+              r="10"
+              stroke="currentColor"
+              stroke-width="2"
+            />
+            <path
+              d="M8 9H8.01"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+            <path
+              d="M16 9H16.01"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+          </svg>
+          <h2 class="no-results__title">No products found</h2>
+          <p class="no-results__message">
+            Try adjusting your filters to find what you're looking for.
+          </p>
+          <button class="no-results__button" id="reset-filters-button">
+            Reset all filters
+          </button>
+        </div>
       </section>
     </main>
     <footer class="footer" role="contentinfo">
