@@ -153,6 +153,7 @@
 }
 
 .header__button {
+  position: relative;
   border: none;
   padding: 0;
   justify-self: center;
@@ -183,6 +184,23 @@
 
 .header__button--search {
   display: none;
+}
+
+.header__cart-count {
+  font-family: var(--font-main);
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: var(--color-secondary);
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
 }
 
 .header__burger {

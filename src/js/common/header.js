@@ -1,4 +1,8 @@
+import { updateCartCount } from '../utils/cartUtils.js';
+
 document.addEventListener('DOMContentLoaded', () => {
+  updateCartCount();
+
   const burger = document.querySelector('.header__burger');
   const mobileNav = document.querySelector('.header__mobile-nav');
   const mobileNavList = document.querySelector('.header__mobile-nav-list');

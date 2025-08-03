@@ -228,13 +228,14 @@ favorites"
             </svg>
           </button>
           <button
-            class="header__button"
             aria-label="View cart"
+            class="header__button"
             onclick="location.href='./cart.html'"
           >
-            <svg class="header__button-icon" aria-hidden="true">
+            <svg aria-hidden="true" class="header__button-icon">
               <use href="./assets/svg/cart.svg#cart"></use>
             </svg>
+            <span class="header__cart-count"></span>
           </button>
         </div>
         <button
@@ -814,6 +815,6 @@ favorites"
       </div>
     </div>
     <script type="module" src="./js/checkout.js"></script>
-    <script src="./js/common/header.js"></script>
+    <script type="module" src="./js/common/header.js"></script>
   </body>
 </html>
