@@ -529,7 +529,14 @@
   }
 
   .reviews .button {
-    width: 60%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 95%;
+    justify-self: center;
+    margin: 0;
+    z-index: 20;
   }
 
   .specs-list {
@@ -566,6 +573,10 @@
 
   .product-card__price {
     font-size: 14px;
+  }
+
+  .footer {
+    margin-block-end: 50px;
   }
 }
 

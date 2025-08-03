@@ -1019,7 +1019,7 @@
   }
 
   .hero {
-    padding: 15vh 20px 25vh;
+    padding: 15vh 20px 35vh;
   }
 
   .hero__color-splash {
@@ -1107,5 +1107,11 @@
 
   .cta__button {
     width: 100%;
+  }
+}
+
+@media (width <= 320px) {
+  .main {
+    padding-left: 15vw;
   }
 }

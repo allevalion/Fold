@@ -355,6 +355,26 @@ body {
   flex-shrink: 0;
 }
 
+@media (width <= 1500px) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 0;
+    max-width: calc(3 * 325px + 1 * 20px);
+  }
+}
+
+@media (width <= 1024px) {
+  .card__controls {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card__controls-text {
+    align-self: start;
+  }
+}
+
 @media (width <= 769px) {
   .controls {
     flex-direction: column;
