@@ -128,7 +128,7 @@
                     fill-rule="evenodd"
                     clip-rule="evenodd"
                     d="M10 0.25C4.61522 0.25 0.25 4.61522 0.25 10C0.25 15.3848 4.61522 19.75 10 19.75C15.3848 19.75 19.75 15.3848 19.75 10C19.7443 4.61758 15.3824 0.255684 10 0.25ZM10 18.25C5.44365 18.25 1.75 14.5563 1.75 10C1.75 5.44365 5.44365 1.75 10 1.75C14.5563 1.75 18.25 5.44365 18.25 10C18.2448 14.5542 14.5542 18.2448 10 18.25ZM11.5 14.5C11.5 14.9142 11.1642 15.25 10.75 15.25C9.92157 15.25 9.25 14.5784 9.25 13.75V10C8.83579 10 8.5 9.66421 8.5 9.25C8.5 8.83579 8.83579 8.5 9.25 8.5C10.0784 8.5 10.75 9.17157 10.75 10V13.75C11.1642 13.75 11.5 14.0858 11.5 14.5ZM8.5 5.875C8.5 5.25368 9.00368 4.75 9.625 4.75C10.2463 4.75 10.75 5.25368 10.75 5.875C10.75 6.49632 10.2463 7 9.625 7C9.00368 7 8.5 6.49632 8.5 5.875Z"
-                    fill="#0F141A"
+                    fill="currentColor"
                   /></svg
                 >About</a
               >
@@ -144,7 +144,7 @@
                     fill-rule="evenodd"
                     clip-rule="evenodd"
                     d="M19 0.5H1C0.585786 0.5 0.25 0.835786 0.25 1.25V14C0.25 14.8284 0.921573 15.5 1.75 15.5H18.25C19.0784 15.5 19.75 14.8284 19.75 14V1.25C19.75 0.835786 19.4142 0.5 19 0.5ZM10 8.48281L2.92844 2H17.0716L10 8.48281ZM7.25406 8L1.75 13.0447V2.95531L7.25406 8ZM8.36406 9.01719L9.48906 10.0531C9.77592 10.3165 10.2166 10.3165 10.5034 10.0531L11.6284 9.01719L17.0659 14H2.92844L8.36406 9.01719ZM12.7459 8L18.25 2.95437V13.0456L12.7459 8Z"
-                    fill="#0F141A"
+                    fill="currentColor"
                   /></svg
                 >Contact</a
               >
@@ -182,6 +182,28 @@
           />
         </div>
         <div class="header__buttons">
+          <button
+            class="header__button header__button--search"
+            aria-label="Search"
+            id="header-search-button"
+          >
+            <svg
+              class="header__button-icon"
+              viewBox="0 0 20 20"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="0.5"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M19.5306 18.4694L14.8366 13.7762C17.6629 10.383 17.3204 5.36693 14.0591 2.38935C10.7978 -0.588237 5.77134 -0.474001 2.64867 2.64867C-0.474001 5.77134 -0.588237 10.7978 2.38935 14.0591C5.36693 17.3204 10.383 17.6629 13.7762 14.8366L18.4694 19.5306C18.7624 19.8237 19.2376 19.8237 19.5306 19.5306C19.8237 19.2376 19.8237 18.7624 19.5306 18.4694ZM1.75 8.5C1.75 4.77208 4.77208 1.75 8.5 1.75C12.2279 1.75 15.25 4.77208 15.25 8.5C15.25 12.2279 12.2279 15.25 8.5 15.25C4.77379 15.2459 1.75413 12.2262 1.75 8.5Z"
+                fill="#4A709C"
+              />
+            </svg>
+          </button>
           <button
             class="header__button"
             aria-label="View favorites"
@@ -224,6 +246,98 @@
           <span class="header__burger-line"></span>
           <span class="header__burger-line"></span>
         </button>
+      </div>
+      <div
+        class="search-modal"
+        id="search-modal"
+        aria-hidden="true"
+        role="dialog"
+        inert
+        aria-modal="false"
+        aria-labelledby="search-modal-title"
+      >
+        <div class="search-modal__container">
+          <div class="search-modal__header">
+            <div class="search-modal__logo">
+              <svg
+                class="search-modal__logo-svg"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 100 125"
+              >
+                <path
+                  fill="#000000"
+                  d="M78.125,89.375L52.998,75.017l-9.117,8.733L38.75,66.875L78.125,27.5L29.862,59.675L5,44.375l90-33.75L78.125,89.375z"
+                />
+              </svg>
+              <span class="search-modal__logo-text">Fold</span>
+            </div>
+            <form
+              class="header__search search-modal__form"
+              id="search-modal-form"
+              role="search"
+            >
+              <svg
+                class="header__search-icon"
+                aria-hidden="true"
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M19.5306 18.4694L14.8366 13.7762C17.6629 10.383 17.3204 5.36693 14.0591 2.38935C10.7978 -0.588237 5.77134 -0.474001 2.64867 2.64867C-0.474001 5.77134 -0.588237 10.7978 2.38935 14.0591C5.36693 17.3204 10.383 17.6629 13.7762 14.8366L18.4694 19.5306C18.7624 19.8237 19.2376 19.8237 19.5306 19.5306C19.8237 19.2376 19.8237 18.7624 19.5306 18.4694ZM1.75 8.5C1.75 4.77208 4.77208 1.75 8.5 1.75C12.2279 1.75 15.25 4.77208 15.25 8.5C15.25 12.2279 12.2279 15.25 8.5 15.25C4.77379 15.2459 1.75413 12.2262 1.75 8.5Z"
+                  fill="#4A709C"
+                />
+              </svg>
+              <label for="mobile-search" class="visually-hidden">Search</label>
+              <input
+                type="text"
+                id="search-modal-input"
+                name="search"
+                class="header__search-input"
+                placeholder="Search"
+              />
+            </form>
+            <button
+              class="search-modal__close"
+              id="search-modal-close"
+              aria-label="Close search"
+            >
+              <svg
+                class="search-modal__close-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6 18L18 6M6 6L18 18"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="search-modal__results" id="search-results">
+            <div class="search-modal__popular">
+              <h3 class="search-modal__subtitle" id="search-modal-title">
+                Popular Products
+              </h3>
+              <div
+                class="search-modal__popular-items"
+                id="popular-products"
+              ></div>
+            </div>
+            <div
+              class="search-modal__suggestions"
+              id="search-suggestions"
+            ></div>
+          </div>
+        </div>
       </div>
     </header>
     <main class="main" role="main">
