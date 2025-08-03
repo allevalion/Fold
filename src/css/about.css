@@ -145,7 +145,7 @@
   justify-content: center;
   gap: 150px;
   padding-block-start: 65px;
-  font-family: var(--font-main);
+  font-family: var(--font-main, 'Plus Jakarta Sans', sans-serif);
 }
 
 .hero {
@@ -344,7 +344,7 @@
 }
 
 .team {
-  border-radius: var(--border-radius-medium);
+  border-radius: var(--border-radius-medium, 16px);
   padding: 40px 0;
   background-color: #f9f5f0;
   position: relative;
@@ -401,7 +401,7 @@
 }
 
 .team-card:focus-within {
-  outline: 2px dashed var(--color-primary);
+  outline: 2px dashed var(--color-primary, #338ff2);
   outline-offset: 4px;
 }
 
@@ -567,7 +567,7 @@
 
 .team__link:focus-visible,
 .cta__button:focus-visible {
-  outline: 2px dashed var(--color-primary);
+  outline: 2px dashed var(--color-primary, #338ff2);
   outline-offset: 4px;
   box-shadow: 0 0 0 4px rgb(51 143 242 / 0.3);
 }
@@ -681,7 +681,7 @@
 }
 
 .manifesto-card:focus-within {
-  outline: 2px dashed var(--color-primary);
+  outline: 2px dashed var(--color-primary, #338ff2);
   outline-offset: 4px;
 }
 
@@ -714,7 +714,7 @@
 }
 
 .flight-log {
-  border-radius: var(--border-radius-medium);
+  border-radius: var(--border-radius-medium, 16px);
   padding: 40px 0;
   background-color: #f9f5f0;
 }
@@ -788,7 +788,7 @@
 }
 
 .milestone:focus-within .milestone__paper {
-  outline: 2px dashed var(--color-primary);
+  outline: 2px dashed var(--color-primary, #338ff2);
   outline-offset: 4px;
 }
 

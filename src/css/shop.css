@@ -29,12 +29,12 @@ body {
   gap: 28px;
   padding-block-start: 65px;
   margin-block-start: 36px;
-  font-family: var(--font-main);
+  font-family: var(--font-main, 'Plus Jakarta Sans', sans-serif);
   flex: 1 0 auto;
 }
 
 .main__title {
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-bold, 700);
   font-size: 45px;
   line-height: 40px;
 }
@@ -59,22 +59,22 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
-  background-color: var(--color-light-blue);
-  color: var(--color-black);
+  background-color: var(--color-light-blue, #e8edf5);
+  color: var(--color-black, #0d141c);
   font-size: 18px;
   line-height: 26px;
-  font-weight: var(--font-weight-medium);
+  font-weight: var(--font-weight-medium, 500);
   padding: 7px 10px 7px 20px;
   border: none;
-  border-radius: var(--border-radius-medium);
+  border-radius: var(--border-radius-medium, 16px);
   cursor: pointer;
-  transition: var(--transition-default);
+  transition: var(--transition-default, all 0.3s ease);
 }
 
 .dropdown-button:hover,
 .dropdown-button:focus-visible {
-  background-color: var(--color-secondary);
-  color: var(--color-white);
+  background-color: var(--color-secondary, #4a709c);
+  color: var(--color-white, #fff);
   outline: none;
   transform: scale(1.05);
 }
@@ -84,8 +84,8 @@ body {
 }
 
 .dropdown-button.active {
-  background-color: var(--color-secondary);
-  color: var(--color-white);
+  background-color: var(--color-secondary, #4a709c);
+  color: var(--color-white, #fff);
 }
 
 .dropdown-button__icon {
@@ -106,10 +106,10 @@ body {
   z-index: 1;
   margin-block-start: 8px;
   padding: 8px 0;
-  border-radius: var(--border-radius-medium);
-  border: 1px solid var(--color-light-blue);
-  background-color: var(--color-white);
-  box-shadow: var(--shadow-default);
+  border-radius: var(--border-radius-medium, 16px);
+  border: 1px solid var(--color-light-blue, #e8edf5);
+  background-color: var(--color-white, #fff);
+  box-shadow: var(--shadow-default, 0 8px 20px rgb(0 0 0 / 0.08));
   animation: dropdown-fade 0.2s ease-out forwards;
   opacity: 0;
   transform: translateY(-10px);
@@ -118,19 +118,19 @@ body {
 
 .dropdown-content a {
   display: block;
-  font-family: var(--font-main);
+  font-family: var(--font-main, 'Plus Jakarta Sans', sans-serif);
   font-size: 16px;
   line-height: 24px;
   padding: 10px 20px;
-  color: var(--color-black);
+  color: var(--color-black, #0d141c);
   text-decoration: none;
-  transition: var(--transition-default);
+  transition: var(--transition-default, all 0.3s ease);
 }
 
 .dropdown-content a:hover,
 .dropdown-content a:focus-visible {
-  background-color: var(--color-light-blue);
-  color: var(--color-secondary);
+  background-color: var(--color-light-blue, #e8edf5);
+  color: var(--color-secondary, #4a709c);
   outline: none;
 }
 
@@ -146,23 +146,23 @@ body {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  background-color: var(--color-light-blue);
-  color: var(--color-black);
+  background-color: var(--color-light-blue, #e8edf5);
+  color: var(--color-black, #0d141c);
   font-size: 18px;
   line-height: 26px;
-  font-weight: var(--font-weight-medium);
+  font-weight: var(--font-weight-medium, 500);
   padding: 7px 20px;
   border: none;
-  border-radius: var(--border-radius-medium);
+  border-radius: var(--border-radius-medium, 16px);
   cursor: pointer;
-  transition: var(--transition-default);
+  transition: var(--transition-default, all 0.3s ease);
   margin-left: auto;
 }
 
 .reset-button:hover,
 .reset-button:focus-visible {
-  background-color: var(--color-secondary);
-  color: var(--color-white);
+  background-color: var(--color-secondary, #4a709c);
+  color: var(--color-white, #fff);
   outline: none;
   transform: scale(1.05);
 }
@@ -256,7 +256,7 @@ body {
   align-self: end;
   gap: 12px;
   padding: 14px 28px;
-  font-family: var(--font-main);
+  font-family: var(--font-main, 'Plus Jakarta Sans', sans-serif);
   font-weight: 600;
   font-size: 16px;
   line-height: 1.4;
@@ -268,27 +268,27 @@ body {
     background-color 0.3s ease,
     transform 0.2s ease;
   color: #fff;
-  background-color: var(--color-primary);
+  background-color: var(--color-primary, #338ff2);
   box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
 }
 
 .card__controls-button:hover {
-  background-color: var(--color-primary-hover);
+  background-color: var(--color-primary-hover, #2a75cc);
 }
 
 .card__controls-button:active {
-  background-color: var(--color-primary-active);
+  background-color: var(--color-primary-active, #265db3);
 }
 
 .card__controls-button:focus-visible {
-  outline: 2px dashed var(--color-primary);
+  outline: 2px dashed var(--color-primary, #338ff2);
   outline-offset: 4px;
   box-shadow: 0 0 0 4px rgb(51 143 242 / 0.3);
 }
 
 .card__controls-button svg {
-  width: var(--icon-size-large);
-  height: var(--icon-size-large);
+  width: var(--icon-size-large, 24px);
+  height: var(--icon-size-large, 24px);
   fill: currentColor;
 }
 
@@ -311,7 +311,7 @@ body {
   width: 80px;
   height: 80px;
   margin-bottom: 20px;
-  color: var(--color-secondary);
+  color: var(--color-secondary, #4a709c);
 }
 
 .no-results__title {
@@ -328,21 +328,21 @@ body {
 
 .no-results__button {
   padding: 12px 24px;
-  background-color: var(--color-primary);
+  background-color: var(--color-primary, #338ff2);
   color: white;
   border: none;
-  border-radius: var(--border-radius-medium);
+  border-radius: var(--border-radius-medium, 16px);
   font-size: 16px;
   cursor: pointer;
-  transition: var(--transition-default);
+  transition: var(--transition-default, all 0.3s ease);
 }
 
 .no-results__button:hover {
-  background-color: var(--color-primary-hover);
+  background-color: var(--color-primary-hover, #2a75cc);
 }
 
 .no-results__button:active {
-  background-color: var(--color-primary-active);
+  background-color: var(--color-primary-active, #265db3);
   transform: scale(0.97);
 }
 

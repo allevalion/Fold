@@ -55,7 +55,7 @@
   margin-top: 5rem;
   width: 8rem;
   height: 8rem;
-  color: var(--color-primary);
+  color: var(--color-primary, #338ff2);
   animation: planeFly 2s ease-in forwards 0.5s;
   opacity: 0;
 }
@@ -67,7 +67,7 @@
   color: var(--color-primary, #338ff2);
   line-height: 1;
   text-transform: uppercase;
-  transition: var(--transition-default);
+  transition: var(--transition-default, all 0.3s ease);
 }
 
 .not-found__title:hover {
@@ -81,7 +81,7 @@
   margin: 0.5rem auto 0;
   width: 0;
   height: 4px;
-  background: var(--color-primary);
+  background: var(--color-primary, #338ff2);
   transition: width 0.5s ease;
 }
 
@@ -153,7 +153,7 @@
 }
 
 .not-found__button:focus {
-  outline: 2px dashed var(--color-primary-hover);
+  outline: 2px dashed var(--color-primary-hover, #2a75cc);
   outline-offset: 4px;
 }
 
