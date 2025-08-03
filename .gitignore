@@ -1,8 +1,4 @@
 node_modules/
 *.py
 utils/
-package.json
-package-lock.json
-stylelint.config.js
-.prettierrc
-.editorconfig
+dist/
