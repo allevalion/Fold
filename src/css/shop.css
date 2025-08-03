@@ -1,4 +1,5 @@
 @keyframes dropdown-fade {
+
   0% {
     opacity: 0;
     transform: translateY(-10px);
@@ -356,6 +357,7 @@ body {
 }
 
 @media (width <= 1500px) {
+
   .cards {
     grid-template-columns: repeat(3, 1fr);
     column-gap: 0;
@@ -364,6 +366,7 @@ body {
 }
 
 @media (width <= 1024px) {
+
   .card__controls {
     flex-direction: column;
     align-items: center;
@@ -376,6 +379,7 @@ body {
 }
 
 @media (width <= 769px) {
+
   .controls {
     flex-direction: column;
     align-items: center;
@@ -439,6 +443,7 @@ body {
 }
 
 @media (width <= 480px) {
+
   .main__title {
     font-size: 35px;
     line-height: 31px;
@@ -493,6 +498,7 @@ body {
 }
 
 @media (width <= 320px) {
+
   .dropdown,
   .reset-button {
     width: 85%;

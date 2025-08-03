@@ -429,6 +429,7 @@
 }
 
 @media (max-width: 1480px) {
+
   .main {
     padding: 0 3vw;
     padding-block-start: 65px;
@@ -436,6 +437,7 @@
 }
 
 @media (max-width: 1024px) {
+
   .cart-item {
     gap: 20px;
     padding: 20px;
@@ -472,6 +474,7 @@
 }
 
 @media (max-width: 768px) {
+
   .cart-grid {
     grid-template-columns: 1fr;
     position: relative;
@@ -571,6 +574,7 @@
 }
 
 @media (max-width: 480px) {
+
   .cart-item {
     grid-template-columns: 180px 1fr;
     padding: 12px;
@@ -640,6 +644,7 @@
 }
 
 @media (max-width: 375px) {
+
   .product-card {
     min-width: 180px;
     max-width: 240px;
