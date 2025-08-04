@@ -1,7 +1,18 @@
 import { showNotification } from './common/notifications.js';
 import { updateCartCount, addToCart } from './utils/cartUtils.js';
+import { initFloatingButton } from './utils/floatingButton.js';
 
 document.addEventListener('DOMContentLoaded', () => {
+  initFloatingButton({
+    mainButtonSelector: '.buy-button',
+    floatingButtonClass: 'floating-button',
+    onClick: () => {
+      const product = getProductData();
+      showNotification(`${product.name} added to cart!`);
+      addToCart(product);
+    },
+  });
+
   const quantityInput = document.querySelector('.quantity-input');
   const btnDecrease = document.querySelector(
     '.quantity-button[aria-label="Decrease quantity"]'
@@ -24,15 +35,6 @@ document.addEventListener('DOMContentLoaded', () => {
     let val = parseInt(quantityInput.value, 10);
     if (isNaN(val) || val < 1) quantityInput.value = 1;
     else if (val > 99) quantityInput.value = 99;
-  });
-
-  const buyBtns = document.querySelectorAll('.buy-button');
-  buyBtns.forEach((btn) => {
-    btn.addEventListener('click', () => {
-      const product = getProductData();
-      showNotification(`${product.name} added to cart!`);
-      addToCart(product);
-    });
   });
 
   const recommendedContainer = document.querySelector(

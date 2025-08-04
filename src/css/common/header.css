@@ -266,7 +266,8 @@
   top: 0;
   left: 0;
   inline-size: 100%;
-  block-size: 100vh;
+  height: 100dvh;
+  height: -webkit-fill-available;
   background-color: white;
   z-index: 999;
   padding: 40px 20px;
@@ -464,7 +465,6 @@
 }
 
 @media (width <= 769px) {
-
   .header {
     padding: 12px 16px;
   }
@@ -521,7 +521,6 @@
 }
 
 @media (width <= 550px) {
-
   .header__mobile-search {
     display: list-item;
   }
@@ -548,7 +547,6 @@
 }
 
 @media (width <= 320px) {
-
   .header__logo-svg {
     inline-size: 28px;
     block-size: 28px;

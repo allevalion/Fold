@@ -12,7 +12,7 @@
   margin-block-start: 36px;
   text-align: center;
   padding: 142px 320px 112px;
-  background-image: url(../assets/img/hero-background.png);
+  background-image: url(../assets/img/hero-background.webp);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -272,7 +272,6 @@
 }
 
 @media (width <= 769px) {
-
   .main {
     padding-top: 56px;
     gap: 24px;
@@ -341,7 +340,6 @@
 }
 
 @media (width <= 480px) {
-
   .main {
     padding-top: 48px;
     gap: 20px;

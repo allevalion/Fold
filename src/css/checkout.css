@@ -1,5 +1,4 @@
 @keyframes spin {
-
   0% {
     transform: rotate(0deg);
   }
@@ -124,6 +123,11 @@
   color: #a0a8b3;
 }
 
+.form-input:not(:placeholder-shown) + .form-label,
+.form-group.has-error .form-input:focus + .form-label {
+  color: #d32f2f;
+}
+
 .form-input:focus + .form-label,
 .form-input:not(:placeholder-shown) + .form-label {
   border-radius: var(--border-radius-small, 12px);
@@ -133,11 +137,6 @@
 }
 
 .form-group.has-error .form-label {
-  color: #d32f2f;
-}
-
-.form-input:not(:placeholder-shown) + .form-label,
-.form-group.has-error .form-input:focus + .form-label {
   color: #d32f2f;
 }
 
@@ -151,7 +150,7 @@
 
 select.form-input {
   appearance: none;
-  background-image: url(data:image/svg+xml;charset=UTF-8,%3csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"%3e%3cpolyline points="6 9 12 15 18 9"%3e%3c/polyline%3e%3c/svg%3e);
+  background-image: url('data:image/svg+xml;charset=UTF-8,%3csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"%3e%3cpolyline points="6 9 12 15 18 9"%3e%3c/polyline%3e%3c/svg%3e');
   background-repeat: no-repeat;
   background-position: right 16px center;
   background-size: 20px;
@@ -231,8 +230,8 @@ select.form-input {
 .same-billing__checkbox:checked::after {
   content: '';
   position: absolute;
-  left: 5px;
-  top: 1px;
+  left: 6.5px;
+  top: 2px;
   width: 5px;
   height: 10px;
   border: solid white;
@@ -530,7 +529,6 @@ select.form-input {
 }
 
 @media (max-width: 1024px) {
-
   .checkout-grid {
     grid-template-columns: 1fr;
     gap: 30px;
@@ -543,7 +541,6 @@ select.form-input {
 }
 
 @media (max-width: 768px) {
-
   .checkout__title {
     font-size: 28px;
     margin-bottom: 10px;
@@ -604,9 +601,17 @@ select.form-input {
 }
 
 @media (max-width: 480px) {
-
   .checkout__title {
     font-size: 24px;
+  }
+
+  .checkout-section {
+    padding-bottom: 20px;
+  }
+
+  .checkout-section:last-of-type {
+    padding-bottom: 0;
+    margin-bottom: 0;
   }
 
   .checkout-section__title,
@@ -625,7 +630,7 @@ select.form-input {
 
   .form-label {
     font-size: 16px;
-    top: 14px;
+    top: 16px;
     left: 16px;
   }
 
@@ -637,6 +642,7 @@ select.form-input {
   .button {
     padding: 12px 20px;
     font-size: 15px;
+    width: 100%;
   }
 
   .form-group.same-billing {
@@ -649,13 +655,29 @@ select.form-input {
   }
 
   .same-billing__checkbox:checked::after {
-    left: 4px;
-    top: 0;
+    left: 6px;
+    top: 3px;
     width: 4px;
     height: 8px;
   }
 
   .same-billing__label {
     font-size: 15px;
+  }
+
+  .review-details {
+    padding: 15px;
+  }
+
+  .review-details__row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    margin-bottom: 16px;
+  }
+
+  .checkout-notice {
+    margin: 15px 0;
+    font-size: 13px;
   }
 }

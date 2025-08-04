@@ -128,6 +128,76 @@ document.addEventListener('DOMContentLoaded', () => {
     return /^\d{3,4}$/.test(cvv);
   };
 
+  const validateStreet = (value) => value.trim().length > 0;
+
+  const validateCity = (value) => value.trim().length > 0;
+
+  const validatePostalCode = (value) => value.trim().length > 0;
+
+  const formatCardNumber = (value) => {
+    return value
+      .replace(/\s/g, '')
+      .replace(/(\d{4})/g, '$1 ')
+      .trim();
+  };
+
+  const formatCardExpiry = (value) => {
+    return value
+      .replace(/\D/g, '')
+      .replace(/(\d{2})(\d)/, '$1/$2')
+      .substring(0, 5);
+  };
+
+  document.getElementById('card-number').addEventListener('input', (e) => {
+    e.target.value = formatCardNumber(e.target.value);
+  });
+
+  document.getElementById('card-expiry').addEventListener('input', (e) => {
+    e.target.value = formatCardExpiry(e.target.value);
+  });
+
+  document.getElementById('card-number').addEventListener('input', (e) => {
+    const cleanedValue = e.target.value.replace(/\s/g, '');
+    if (cleanedValue.length > 16) {
+      e.target.value = formatCardNumber(cleanedValue.slice(0, 16));
+      return;
+    }
+    e.target.value = formatCardNumber(cleanedValue);
+  });
+
+  document.getElementById('card-expiry').addEventListener('input', (e) => {
+    const cleanedValue = e.target.value.replace(/\D/g, '');
+    if (cleanedValue.length > 4) {
+      e.target.value = formatCardExpiry(cleanedValue.slice(0, 4));
+      return;
+    }
+    e.target.value = formatCardExpiry(cleanedValue);
+  });
+
+  document.getElementById('card-cvv').addEventListener('input', (e) => {
+    const cleanedValue = e.target.value.replace(/\D/g, '');
+    if (cleanedValue.length > 4) {
+      e.target.value = cleanedValue.slice(0, 4);
+    }
+  });
+
+  const validateInputOnBlur = (elementId, validationFn) => {
+    const input = document.getElementById(elementId);
+    input.addEventListener('blur', () => {
+      const isValid = validationFn(input.value.trim());
+      setErrorState(elementId, isValid);
+    });
+  };
+
+  validateInputOnBlur('card-number', validateCardNumber);
+  validateInputOnBlur('card-expiry', validateExpiry);
+  validateInputOnBlur('card-cvv', validateCVV);
+  validateInputOnBlur('email', validateEmail);
+  validateInputOnBlur('phone', validatePhone);
+  validateInputOnBlur('billing-street', validateStreet);
+  validateInputOnBlur('billing-city', validateCity);
+  validateInputOnBlur('billing-postal', validatePostalCode);
+
   const calculateDeliveryDate = () => {
     const today = new Date();
     const deliveryDate = new Date(today);

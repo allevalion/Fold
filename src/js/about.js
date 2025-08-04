@@ -1,4 +1,3 @@
-/* TODO: улучшить reduced motion и contrast */
 const motionOK = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const highContrast = window.matchMedia('(prefers-contrast: more)').matches;
 

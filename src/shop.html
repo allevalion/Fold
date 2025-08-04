@@ -30,7 +30,7 @@
     />
     <meta
       property="og:image"
-      content="https://allevalion.github.io/Fold/src/assets/img/hero-background.png"
+      content="https://allevalion.github.io/Fold/src/assets/img/hero-background.webp"
     />
     <meta name="twitter:card" content="summary_large_image" />
 
@@ -100,7 +100,7 @@
                   <path
                     clip-rule="evenodd"
                     d="M19.5306 18.4694L14.8366 13.7762C17.6629 10.383 17.3204 5.36693 14.0591 2.38935C10.7978 -0.588237 5.77134 -0.474001 2.64867 2.64867C-0.474001 5.77134 -0.588237 10.7978 2.38935 14.0591C5.36693 17.3204 10.383 17.6629 13.7762 14.8366L18.4694 19.5306C18.7624 19.8237 19.2376 19.8237 19.5306 19.5306C19.8237 19.2376 19.8237 18.7624 19.5306 18.4694ZM1.75 8.5C1.75 4.77208 4.77208 1.75 8.5 1.75C12.2279 1.75 15.25 4.77208 15.25 8.5C15.25 12.2279 12.2279 15.25 8.5 15.25C4.77379 15.2459 1.75413 12.2262 1.75 8.5Z"
-                    fill="#4A709C"
+                    fill="currentColor"
                     fill-rule="evenodd"
                   ></path>
                 </svg>
@@ -198,7 +198,7 @@
             <path
               clip-rule="evenodd"
               d="M19.5306 18.4694L14.8366 13.7762C17.6629 10.383 17.3204 5.36693 14.0591 2.38935C10.7978 -0.588237 5.77134 -0.474001 2.64867 2.64867C-0.474001 5.77134 -0.588237 10.7978 2.38935 14.0591C5.36693 17.3204 10.383 17.6629 13.7762 14.8366L18.4694 19.5306C18.7624 19.8237 19.2376 19.8237 19.5306 19.5306C19.8237 19.2376 19.8237 18.7624 19.5306 18.4694ZM1.75 8.5C1.75 4.77208 4.77208 1.75 8.5 1.75C12.2279 1.75 15.25 4.77208 15.25 8.5C15.25 12.2279 12.2279 15.25 8.5 15.25C4.77379 15.2459 1.75413 12.2262 1.75 8.5Z"
-              fill="#4A709C"
+              fill="currentColor"
               fill-rule="evenodd"
             ></path>
           </svg>
@@ -215,6 +215,7 @@
         <div class="header__buttons">
           <button
             class="header__button header__button--search"
+            type="button"
             aria-label="Search"
             id="header-search-button"
           >
@@ -231,11 +232,12 @@
                 fill-rule="evenodd"
                 clip-rule="evenodd"
                 d="M19.5306 18.4694L14.8366 13.7762C17.6629 10.383 17.3204 5.36693 14.0591 2.38935C10.7978 -0.588237 5.77134 -0.474001 2.64867 2.64867C-0.474001 5.77134 -0.588237 10.7978 2.38935 14.0591C5.36693 17.3204 10.383 17.6629 13.7762 14.8366L18.4694 19.5306C18.7624 19.8237 19.2376 19.8237 19.5306 19.5306C19.8237 19.2376 19.8237 18.7624 19.5306 18.4694ZM1.75 8.5C1.75 4.77208 4.77208 1.75 8.5 1.75C12.2279 1.75 15.25 4.77208 15.25 8.5C15.25 12.2279 12.2279 15.25 8.5 15.25C4.77379 15.2459 1.75413 12.2262 1.75 8.5Z"
-                fill="#4A709C"
+                fill="currentColor"
               />
             </svg>
           </button>
           <button
+            type="button"
             class="header__button"
             aria-label="View favorites"
             class="header__button"
@@ -324,10 +326,12 @@
                   fill-rule="evenodd"
                   clip-rule="evenodd"
                   d="M19.5306 18.4694L14.8366 13.7762C17.6629 10.383 17.3204 5.36693 14.0591 2.38935C10.7978 -0.588237 5.77134 -0.474001 2.64867 2.64867C-0.474001 5.77134 -0.588237 10.7978 2.38935 14.0591C5.36693 17.3204 10.383 17.6629 13.7762 14.8366L18.4694 19.5306C18.7624 19.8237 19.2376 19.8237 19.5306 19.5306C19.8237 19.2376 19.8237 18.7624 19.5306 18.4694ZM1.75 8.5C1.75 4.77208 4.77208 1.75 8.5 1.75C12.2279 1.75 15.25 4.77208 15.25 8.5C15.25 12.2279 12.2279 15.25 8.5 15.25C4.77379 15.2459 1.75413 12.2262 1.75 8.5Z"
-                  fill="#4A709C"
+                  fill="currentColor"
                 />
               </svg>
-              <label for="mobile-search" class="visually-hidden">Search</label>
+              <label for="search-modal-input" class="visually-hidden"
+                >Search</label
+              >
               <input
                 type="text"
                 id="search-modal-input"
@@ -507,7 +511,8 @@
       <section class="cards">
         <a class="card" href="./product/falcon.html" tabindex="0">
           <img
-            alt="The Falcon"
+            loading="lazy"
+            alt=""
             class="card__image"
             src="./assets/img/card-images/high-speed/shadow-high-speed.png"
           />
@@ -546,7 +551,8 @@
         </a>
         <a class="card" href="./product/eagle.html" tabindex="0">
           <img
-            alt="The Eagle"
+            loading="lazy"
+            alt=""
             class="card__image"
             src="./assets/img/card-images/classic-gliders/dayflight-classic.png"
           />
@@ -585,7 +591,8 @@
         </a>
         <a class="card" href="./product/arrow.html" tabindex="0">
           <img
-            alt="The Arrow"
+            loading="lazy"
+            alt=""
             class="card__image"
             src="./assets/img/card-images/high-speed/shadow-high-speed.png"
           />
@@ -624,7 +631,8 @@
         </a>
         <a class="card" href="./product/condor.html" tabindex="0">
           <img
-            alt="The Condor"
+            loading="lazy"
+            alt=""
             class="card__image"
             src="./assets/img/card-images/classic-gliders/dayflight-classic.png"
           />
@@ -663,7 +671,8 @@
         </a>
         <a class="card" href="./product/swift.html" tabindex="0">
           <img
-            alt="The Swift"
+            loading="lazy"
+            alt=""
             class="card__image"
             src="./assets/img/card-images/high-speed/shadow-high-speed.png"
           />
@@ -702,7 +711,8 @@
         </a>
         <a class="card" href="./product/raptor.html" tabindex="0">
           <img
-            alt="The Raptor"
+            loading="lazy"
+            alt=""
             class="card__image"
             src="./assets/img/card-images/high-speed/shadow-high-speed.png"
           />
@@ -741,7 +751,8 @@
         </a>
         <a class="card" href="./product/phoenix.html" tabindex="0">
           <img
-            alt="The Phoenix"
+            loading="lazy"
+            alt=""
             class="card__image"
             src="./assets/img/card-images/artistic-planes/mythic-artistic.png"
           />
@@ -780,7 +791,8 @@
         </a>
         <a class="card" href="./product/voyager.html" tabindex="0">
           <img
-            alt="The Voyager"
+            loading="lazy"
+            alt=""
             class="card__image"
             src="./assets/img/card-images/classic-gliders/dayflight-classic.png"
           />
@@ -819,7 +831,8 @@
         </a>
         <a class="card" href="./product/origami.html" tabindex="0">
           <img
-            alt="The Origami"
+            loading="lazy"
+            alt=""
             class="card__image"
             src="./assets/img/card-images/classic-gliders/dayflight-classic.png"
           />
@@ -858,7 +871,8 @@
         </a>
         <a class="card" href="./product/stingray.html" tabindex="0">
           <img
-            alt="The Stingray"
+            loading="lazy"
+            alt=""
             class="card__image"
             src="./assets/img/card-images/classic-gliders/dayflight-classic.png"
           />
@@ -897,7 +911,8 @@
         </a>
         <a class="card" href="./product/silverwing.html" tabindex="0">
           <img
-            alt="The Silverwing"
+            loading="lazy"
+            alt=""
             class="card__image"
             src="./assets/img/card-images/artistic-planes/mythic-artistic.png"
           />
@@ -936,7 +951,8 @@
         </a>
         <a class="card" href="./product/dragonfly.html" tabindex="0">
           <img
-            alt="The Dragonfly"
+            loading="lazy"
+            alt=""
             class="card__image"
             src="./assets/img/card-images/artistic-planes/mythic-artistic.png"
           />
@@ -975,7 +991,8 @@
         </a>
         <a class="card" href="./product/bullet.html" tabindex="0">
           <img
-            alt="The Bullet"
+            loading="lazy"
+            alt=""
             class="card__image"
             src="./assets/img/card-images/high-speed/shadow-high-speed.png"
           />
@@ -1014,7 +1031,8 @@
         </a>
         <a class="card" href="./product/cloudsurfer.html" tabindex="0">
           <img
-            alt="The Cloudsurfer"
+            loading="lazy"
+            alt=""
             class="card__image"
             src="./assets/img/card-images/classic-gliders/dayflight-classic.png"
           />
@@ -1053,7 +1071,8 @@
         </a>
         <a class="card" href="./product/nightshade.html" tabindex="0">
           <img
-            alt="The Nightshade"
+            loading="lazy"
+            alt=""
             class="card__image"
             src="./assets/img/card-images/artistic-planes/mythic-artistic.png"
           />
@@ -1092,7 +1111,8 @@
         </a>
         <a class="card" href="./product/winddancer.html" tabindex="0">
           <img
-            alt="The Winddancer"
+            loading="lazy"
+            alt=""
             class="card__image"
             src="./assets/img/card-images/artistic-planes/mythic-artistic.png"
           />
@@ -1131,7 +1151,8 @@
         </a>
         <a class="card" href="./product/thunderbolt.html" tabindex="0">
           <img
-            alt="The Thunderbolt"
+            loading="lazy"
+            alt=""
             class="card__image"
             src="./assets/img/card-images/high-speed/shadow-high-speed.png"
           />
@@ -1170,7 +1191,8 @@
         </a>
         <a class="card" href="./product/hummingbird.html" tabindex="0">
           <img
-            alt="The Hummingbird"
+            loading="lazy"
+            alt=""
             class="card__image"
             src="./assets/img/card-images/classic-gliders/dayflight-classic.png"
           />
@@ -1209,7 +1231,8 @@
         </a>
         <a class="card" href="./product/zenith.html" tabindex="0">
           <img
-            alt="The Zenith"
+            loading="lazy"
+            alt=""
             class="card__image"
             src="./assets/img/card-images/classic-gliders/shadow-classic.png"
           />
@@ -1248,7 +1271,8 @@
         </a>
         <a class="card" href="./product/mirage.html" tabindex="0">
           <img
-            alt="The Mirage"
+            loading="lazy"
+            alt=""
             class="card__image"
             src="./assets/img/card-images/artistic-planes/mythic-artistic.png"
           />
@@ -1287,7 +1311,8 @@
         </a>
         <a class="card" href="./product/aether.html" tabindex="0">
           <img
-            alt="The Aether"
+            loading="lazy"
+            alt=""
             class="card__image"
             src="./assets/img/card-images/artistic-planes/mythic-artistic.png"
           />
@@ -1392,6 +1417,7 @@
       <p class="footer__text">© 2025 Fold. All rights reserved.</p>
       <a
         class="footer__github"
+        aria-label="GitHub репозиторий проекта Fold"
         href="https://github.com/allevalion/Fold"
         rel="noopener noreferrer"
         target="_blank"

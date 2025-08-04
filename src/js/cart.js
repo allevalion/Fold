@@ -1,5 +1,6 @@
 import { showNotification } from './common/notifications.js';
 import { updateCartCount } from './utils/cartUtils.js';
+import { initFloatingButton } from './utils/floatingButton.js';
 
 updateCartCount();
 
@@ -10,9 +11,22 @@ document.addEventListener('DOMContentLoaded', () => {
   const taxElement = document.getElementById('tax');
   const totalElement = document.getElementById('total');
   const promoCodeInput = document.getElementById('promo-code');
-  const promoCodeButton = document.querySelector('.promo-code__button');
+  const promoCodeAddButton = document.getElementById('add-promo');
+  const promoCodeRemoveButton = document.getElementById('remove-promo');
   const checkoutButton = document.getElementById('checkout-button');
   const favoritesItemsContainer = document.getElementById('favorites-items');
+
+  initFloatingButton({
+    mainButtonSelector: '#checkout-button',
+    floatingButtonClass: 'floating-button',
+    onClick: () => {
+      window.location.href = 'checkout.html';
+    },
+  });
+
+  checkoutButton.addEventListener('click', () => {
+    window.location.href = 'checkout.html';
+  });
 
   let cart = JSON.parse(localStorage.getItem('cart')) || [];
   let promoCode = localStorage.getItem('promoCode') || '';
@@ -30,27 +44,27 @@ document.addEventListener('DOMContentLoaded', () => {
       const itemElement = document.createElement('div');
       itemElement.className = 'cart-item';
 
-      const discount = item.quantity > 3 ? 0.1 : 0;
-      const discountedPrice = item.price * (1 - discount);
+      const itemDiscount = item.quantity > 3 ? 0.1 : 0;
+      const discountedPrice = item.price * (1 - itemDiscount);
 
       itemElement.innerHTML = `
-        <img src="${item.image}" alt="${item.name}" class="cart-item__image">
-        <div class="cart-item__info">
-          <h3 class="cart-item__title">${item.name}</h3>
-          <p class="cart-item__description">${item.description}</p>
-          <span class="cart-item__category">${item.category}</span>
-          ${discount > 0 ? `<span class="cart-item__discount">10% discount applied</span>` : ''}
+      <img src="${item.image}" alt="${item.name}" class="cart-item__image">
+      <div class="cart-item__info">
+        <h3 class="cart-item__title">${item.name}</h3>
+        <p class="cart-item__description">${item.description}</p>
+        <span class="cart-item__category">${item.category}</span>
+        ${itemDiscount > 0 ? `<span class="cart-item__discount">10% discount applied</span>` : ''}
+      </div>
+      <div class="cart-item__controls">
+        <span class="cart-item__price">$${(discountedPrice * item.quantity).toFixed(2)}</span>
+        <div class="quantity-controls">
+          <button class="quantity-button" data-index="${index}" data-action="decrease">-</button>
+          <input type="number" class="quantity-input" value="${item.quantity}" min="1" max="99" data-index="${index}">
+          <button class="quantity-button" data-index="${index}" data-action="increase">+</button>
         </div>
-        <div class="cart-item__controls">
-          <span class="cart-item__price">$${(discountedPrice * item.quantity).toFixed(2)}</span>
-          <div class="quantity-controls">
-            <button class="quantity-button" data-index="${index}" data-action="decrease">-</button>
-            <input type="number" class="quantity-input" value="${item.quantity}" min="1" max="99" data-index="${index}">
-            <button class="quantity-button" data-index="${index}" data-action="increase">+</button>
-          </div>
-          <button class="cart-item__remove" data-index="${index}">Remove</button>
-        </div>
-      `;
+        <button class="cart-item__remove" data-index="${index}">Remove</button>
+      </div>
+    `;
 
       cartItemsContainer.appendChild(itemElement);
     });
@@ -95,17 +109,22 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   const updateSummary = () => {
-    const subtotal = cart.reduce((sum, item) => {
-      const discount = item.quantity > 3 ? 0.1 : 0;
-      return sum + item.price * item.quantity * (1 - discount);
+    const quantityDiscount = cart.reduce((sum, item) => {
+      return item.quantity > 3 ? sum + item.price * item.quantity * 0.1 : sum;
     }, 0);
 
-    const discount = subtotal * discountRate;
-    const tax = (subtotal - discount) * 0.07;
-    const total = subtotal - discount + tax;
+    const subtotalWithoutDiscount = cart.reduce((sum, item) => {
+      return sum + item.price * item.quantity;
+    }, 0);
 
-    subtotalElement.textContent = `$${subtotal.toFixed(2)}`;
-    discountElement.textContent = `-$${discount.toFixed(2)}`;
+    const promoDiscount = subtotalWithoutDiscount * discountRate;
+    const totalDiscount = quantityDiscount + promoDiscount;
+
+    const tax = (subtotalWithoutDiscount - totalDiscount) * 0.07;
+    const total = subtotalWithoutDiscount - totalDiscount + tax;
+
+    subtotalElement.textContent = `$${subtotalWithoutDiscount.toFixed(2)}`;
+    discountElement.textContent = `-$${totalDiscount.toFixed(2)}`;
     taxElement.textContent = `$${tax.toFixed(2)}`;
     totalElement.textContent = `$${total.toFixed(2)}`;
 
@@ -138,6 +157,16 @@ document.addEventListener('DOMContentLoaded', () => {
     updateCartCount();
   };
 
+  const removePromoCode = () => {
+    discountRate = 0;
+    promoCode = '';
+    promoCodeInput.value = '';
+    localStorage.removeItem('promoCode');
+    renderCart();
+    promoCodeRemoveButton.style.display = 'none';
+    showNotification('Promo code removed!');
+  };
+
   const applyPromoCode = () => {
     const code = promoCodeInput.value.trim();
     if (code === 'FLY10') {
@@ -145,6 +174,8 @@ document.addEventListener('DOMContentLoaded', () => {
       promoCode = code;
       localStorage.setItem('promoCode', code);
       renderCart();
+      promoCodeRemoveButton.style.display = 'block';
+      showNotification('Promo code applied!');
     } else {
       discountRate = 0;
       promoCodeInput.value = '';
@@ -155,6 +186,8 @@ document.addEventListener('DOMContentLoaded', () => {
       }, 2000);
     }
   };
+
+  promoCodeRemoveButton.addEventListener('click', removePromoCode);
 
   const removeFavorite = (index) => {
     let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
@@ -183,13 +216,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  promoCodeButton.addEventListener('click', applyPromoCode);
+  promoCodeAddButton.addEventListener('click', applyPromoCode);
   promoCodeInput.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') applyPromoCode();
-  });
-
-  checkoutButton.addEventListener('click', () => {
-    window.location.href = 'checkout.html';
   });
 
   favoritesItemsContainer.addEventListener('click', (e) => {
@@ -202,6 +231,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (promoCode) {
     promoCodeInput.value = promoCode;
     applyPromoCode();
+    promoCodeRemoveButton.style.display = 'block';
   }
 
   renderFavorites();

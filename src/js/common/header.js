@@ -38,6 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const searchInput = document.getElementById('search-modal-input');
   const searchForm = document.getElementById('search-modal-form');
   const closeButton = document.getElementById('search-modal-close');
+  const searchTitle = document.getElementById('search-modal-title');
   const popularProductsContainer = document.getElementById('popular-products');
   const searchSuggestionsContainer =
     document.getElementById('search-suggestions');
@@ -91,13 +92,20 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   const handleSearch = (query) => {
-    if (!query.trim()) {
+    const searchQuery = query.trim();
+
+    if (searchQuery) {
+      popularProductsContainer.style.display = 'none';
+      searchTitle.style.display = 'none';
+    } else {
+      popularProductsContainer.style.display = 'flex';
+      searchTitle.style.display = 'block';
       searchSuggestionsContainer.innerHTML = '';
       return;
     }
 
     const suggestions = products.filter((product) =>
-      product.name.toLowerCase().includes(query.toLowerCase())
+      product.name.toLowerCase().includes(searchQuery.toLowerCase())
     );
 
     if (suggestions.length) {
@@ -105,17 +113,17 @@ document.addEventListener('DOMContentLoaded', () => {
         .map(
           (product) => `
         <a href="${getBaseUrl()}${product.url}" class="search-suggestion" tabindex="0">
-          ${highlightMatch(product.name, query)}
+          ${highlightMatch(product.name, searchQuery)}
         </a>
       `
         )
         .join('');
     } else {
       searchSuggestionsContainer.innerHTML = `
-        <div class="search-suggestion search-suggestion--empty">
-          No products found
-        </div>
-      `;
+      <div class="search-suggestion search-suggestion--empty">
+        No products found
+      </div>
+    `;
     }
   };
 

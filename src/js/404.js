@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   setTimeout(function () {
     secretButton.classList.add('visible');
-  }, 15000);
+  }, 8000);
 
   plane.addEventListener('click', function () {
     this.style.animation = 'none';
