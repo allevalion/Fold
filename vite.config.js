@@ -5,7 +5,7 @@ import { viteStaticCopy } from 'vite-plugin-static-copy';
 
 export default defineConfig({
   root: 'src',
-  base: './',
+  base: '/Fold/',
   build: {
     outDir: '../dist',
     emptyOutDir: true,
