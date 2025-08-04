@@ -34,10 +34,10 @@
     <meta name="twitter:card" content="summary_large_image" />
 
     <title>Fold: Checkout</title>
-    <script type="module" crossorigin src="/Fold/assets/checkout-EhOqQ6VG.js"></script>
-    <link rel="modulepreload" crossorigin href="/Fold/assets/header-Bhw5Jc_z.js">
+    <script type="module" crossorigin src="/Fold/assets/checkout-CLDU48H0.js"></script>
+    <link rel="modulepreload" crossorigin href="/Fold/assets/header-DPdgbyRo.js">
     <link rel="modulepreload" crossorigin href="/Fold/assets/notifications-Cp4frmnl.js">
-    <link rel="stylesheet" crossorigin href="/Fold/assets/header-LbfNx7NH.css">
+    <link rel="stylesheet" crossorigin href="/Fold/assets/header-CUmk6lB3.css">
     <link rel="stylesheet" crossorigin href="/Fold/assets/notifications-Dkjr-h-I.css">
     <link rel="stylesheet" crossorigin href="/Fold/assets/checkout-B4Dtt43C.css">
     <link rel="stylesheet" crossorigin href="/Fold/assets/animations-DQNWqfJJ.css">
@@ -328,7 +328,9 @@ favorites"
                   fill="currentColor"
                 />
               </svg>
-              <label for="search-modal-input" class="visually-hidden">Search</label>
+              <label for="search-modal-input" class="visually-hidden"
+                >Search</label
+              >
               <input
                 type="text"
                 id="search-modal-input"
@@ -429,6 +431,7 @@ favorites"
                 </div>
 
                 <div class="form-group">
+                  <label for="country" class="visually-hidden">Country</label>
                   <select
                     id="country"
                     class="form-input"
@@ -441,7 +444,6 @@ favorites"
                     <option value="CA">Canada</option>
                     <option value="UK">United Kingdom</option>
                   </select>
-                  <label for="state" class="visually-hidden">Country</label>
                 </div>
 
                 <div id="state-group" class="form-group" style="display: none">
@@ -654,6 +656,7 @@ favorites"
                   class="summary-header__toggle"
                   aria-expanded="false"
                   aria-controls="summary-content"
+                  aria-label="Toggle checkout summary"
                 >
                   <svg
                     class="summary-header__toggle-icon"
