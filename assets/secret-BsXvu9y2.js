@@ -1,0 +1,1 @@
+import"./header-BNmznXph.js";/* empty css                   */document.addEventListener("DOMContentLoaded",()=>{const s=document.querySelectorAll(".airplane-card"),r=new IntersectionObserver(e=>{e.forEach(t=>{t.isIntersecting&&(t.target.classList.add("fade-in--active"),r.unobserve(t.target))})},{threshold:.1});s.forEach(e=>{e.classList.add("fade-in"),r.observe(e)})});

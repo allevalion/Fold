@@ -1,0 +1,1 @@
+function i(e){const n=document.querySelector(".notification-container"),t=document.createElement("div");t.className="notification",t.setAttribute("role","status"),t.innerText=e,n.appendChild(t),setTimeout(()=>{t.classList.add("hide"),t.addEventListener("transitionend",()=>t.remove())},3e3)}export{i as s};
