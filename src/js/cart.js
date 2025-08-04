@@ -1,6 +1,6 @@
 import { showNotification } from './common/notifications.js';
 import { updateCartCount } from './utils/cartUtils.js';
-import { initFloatingButton } from './utils/floatingButton.js';
+import { initFloatingButton } from '/js/utils/floatingButton.js';
 
 updateCartCount();
 
