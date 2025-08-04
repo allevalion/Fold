@@ -573,6 +573,10 @@
   .product-card__price {
     font-size: 14px;
   }
+
+  .floating-button {
+    width: 100%;
+  }
 }
 
 @media (max-width: 480px) {
@@ -694,6 +698,10 @@
     font-size: 12px;
     gap: 2px;
   }
+
+  .floating-button {
+    width: 100%;
+  }
 }
 
 @media (max-width: 375px) {
@@ -784,5 +792,9 @@
   .product-card__price {
     font-size: 12px;
     gap: 2px;
+  }
+
+  .floating-button {
+    width: 100%;
   }
 }
