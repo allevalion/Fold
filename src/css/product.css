@@ -1,4 +1,5 @@
 @keyframes jump-scale {
+
   0% {
     transform: scale(1);
   }
@@ -17,6 +18,7 @@
 }
 
 @keyframes heart-beat {
+
   0% {
     transform: scale(1);
   }
@@ -468,6 +470,7 @@
 }
 
 @media (max-width: 1024px) {
+
   .main {
     padding: 0 1vw;
     padding-block-start: 95px;
@@ -475,6 +478,7 @@
 }
 
 @media (max-width: 880px) {
+
   .product__category,
   .product__type {
     max-width: 80%;
@@ -482,6 +486,7 @@
 }
 
 @media (max-width: 768px) {
+
   .main {
     padding: 0 4vw;
     padding-block-start: 75px;
@@ -571,6 +576,7 @@
 }
 
 @media (max-width: 480px) {
+
   .main {
     padding: 0 2vw;
     padding-block-start: 75px;
@@ -680,17 +686,18 @@
   }
 
   .product-card__description {
-    font-size: 10px;
+    font-size: 12px;
     margin-bottom: 6px;
   }
 
   .product-card__price {
-    font-size: 11px;
+    font-size: 12px;
     gap: 2px;
   }
 }
 
 @media (max-width: 375px) {
+
   .main {
     gap: 12px;
   }
@@ -701,7 +708,7 @@
   }
 
   .product__tagline {
-    font-size: 11px;
+    font-size: 12px;
     margin-bottom: 6px;
   }
 
@@ -711,7 +718,7 @@
 
   .product__category,
   .product__type {
-    font-size: 10px;
+    font-size: 12px;
     gap: 2%;
     padding: 2px 4px;
   }
@@ -719,7 +726,7 @@
   .product__description,
   .product__price,
   .product__quantity {
-    font-size: 10px;
+    font-size: 12px;
   }
 
   .quantity-button,
@@ -730,8 +737,8 @@
   }
 
   .button {
-    font-size: 10px;
-    padding: 4px 0;
+    font-size: 12px;
+    padding: 6px 0;
     border-radius: 6px;
   }
 
@@ -741,9 +748,9 @@
   }
 
   .specs-list {
-    gap: 2px;
-    font-size: 9px;
-    padding: 4px 0;
+    font-size: 12px;
+    gap: 4px;
+    padding: 8px 0;
   }
 
   .specs-list__item {
@@ -765,17 +772,17 @@
   }
 
   .product-card__title {
-    font-size: 9px;
-    margin-bottom: 2px;
+    font-size: 12px;
+    margin-bottom: 4px;
   }
 
   .product-card__description {
-    font-size: 7px;
-    margin-bottom: 2px;
+    font-size: 12px;
+    margin-bottom: 6px;
   }
 
   .product-card__price {
-    font-size: 8px;
-    gap: 1px;
+    font-size: 12px;
+    gap: 2px;
   }
 }

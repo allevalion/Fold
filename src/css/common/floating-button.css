@@ -1,4 +1,6 @@
 .floating-button-container {
+  justify-items: center;
+  width: 100%;
   font-family: var(--font-main);
   display: none;
   position: fixed;
@@ -8,44 +10,6 @@
   z-index: 100;
   text-align: center;
   padding: 0 2.5%;
-}
-
-.floating-button {
-  width: 100%;
-  max-width: 500px;
-  padding: 16px;
-  border-radius: var(--border-radius-medium, 16px);
-  background-color: var(--color-primary, #338ff2);
-  color: white;
-  font-weight: 600;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  transition: all 0.3s ease;
-}
-
-.floating-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
-}
-
-@media (max-width: 768px) {
-  .floating-button-container {
-    display: block;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease;
-  }
-
-  .floating-button-container.visible {
-    opacity: 1;
-    pointer-events: auto;
-  }
-
-  .cart-grid {
-    padding-bottom: 90px;
-  }
-}
-
-.floating-button-container {
   transition:
     opacity 0.3s ease,
     transform 0.3s ease;
@@ -61,4 +25,41 @@
 .floating-button-container.hidden {
   opacity: 0;
   transform: translateY(20px);
+}
+
+.floating-button {
+  justify-self: center;
+  width: 100%;
+  max-width: 500px;
+  padding: 16px;
+  border-radius: var(--border-radius-medium, 16px);
+  background-color: var(--color-primary, #338ff2);
+  color: white;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 0.15);
+  transition: all 0.3s ease;
+}
+
+.floating-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgb(0 0 0 / 0.2);
+}
+
+@media (max-width: 768px) {
+
+  .floating-button-container {
+    display: block;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+
+  .floating-button-container.visible {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .cart-grid {
+    padding-bottom: 90px;
+  }
 }

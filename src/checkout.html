@@ -328,7 +328,9 @@ favorites"
                   fill="currentColor"
                 />
               </svg>
-              <label for="search-modal-input" class="visually-hidden">Search</label>
+              <label for="search-modal-input" class="visually-hidden"
+                >Search</label
+              >
               <input
                 type="text"
                 id="search-modal-input"
@@ -429,6 +431,7 @@ favorites"
                 </div>
 
                 <div class="form-group">
+                  <label for="country" class="visually-hidden">Country</label>
                   <select
                     id="country"
                     class="form-input"
@@ -441,7 +444,6 @@ favorites"
                     <option value="CA">Canada</option>
                     <option value="UK">United Kingdom</option>
                   </select>
-                  <label for="state" class="visually-hidden">Country</label>
                 </div>
 
                 <div id="state-group" class="form-group" style="display: none">
@@ -654,6 +656,7 @@ favorites"
                   class="summary-header__toggle"
                   aria-expanded="false"
                   aria-controls="summary-content"
+                  aria-label="Toggle checkout summary"
                 >
                   <svg
                     class="summary-header__toggle-icon"

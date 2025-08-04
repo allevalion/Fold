@@ -48,9 +48,9 @@ document.addEventListener('DOMContentLoaded', () => {
       const discountedPrice = item.price * (1 - itemDiscount);
 
       itemElement.innerHTML = `
-      <img src="${item.image}" alt="${item.name}" class="cart-item__image">
+      <img src="${item.image}" alt="${item.name}" height="180px" width="180px" loading="lazy" class="cart-item__image">
       <div class="cart-item__info">
-        <h3 class="cart-item__title">${item.name}</h3>
+        <h2 class="cart-item__title">${item.name}</h2>
         <p class="cart-item__description">${item.description}</p>
         <span class="cart-item__category">${item.category}</span>
         ${itemDiscount > 0 ? `<span class="cart-item__discount">10% discount applied</span>` : ''}
@@ -58,9 +58,10 @@ document.addEventListener('DOMContentLoaded', () => {
       <div class="cart-item__controls">
         <span class="cart-item__price">$${(discountedPrice * item.quantity).toFixed(2)}</span>
         <div class="quantity-controls">
-          <button class="quantity-button" data-index="${index}" data-action="decrease">-</button>
-          <input type="number" class="quantity-input" value="${item.quantity}" min="1" max="99" data-index="${index}">
-          <button class="quantity-button" data-index="${index}" data-action="increase">+</button>
+          <label for="quantity-${index}" class="visually-hidden">Quantity for ${item.name}</label>
+          <button class="quantity-button" data-index="${index}" data-action="decrease" aria-label="Decrease quantity">-</button>
+          <input id="quantity-${index}" type="number" class="quantity-input" value="${item.quantity}" min="1" max="99" data-index="${index}">
+          <button class="quantity-button" data-index="${index}" data-action="increase" aria-label="Increase quantity">+</button>
         </div>
         <button class="cart-item__remove" data-index="${index}">Remove</button>
       </div>

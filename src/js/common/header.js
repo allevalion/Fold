@@ -28,6 +28,15 @@ document.addEventListener('DOMContentLoaded', () => {
     isOpen ? closeMenu() : openMenu();
   });
 
+  function adjustMobileNavHeight() {
+    if (mobileNav) {
+      mobileNav.style.height = `${window.innerHeight}px`;
+    }
+  }
+
+  window.addEventListener('resize', adjustMobileNavHeight);
+  adjustMobileNavHeight();
+
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') closeMenu();
   });

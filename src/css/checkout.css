@@ -529,6 +529,7 @@ select.form-input {
 }
 
 @media (max-width: 1024px) {
+
   .checkout-grid {
     grid-template-columns: 1fr;
     gap: 30px;
@@ -541,6 +542,7 @@ select.form-input {
 }
 
 @media (max-width: 768px) {
+
   .checkout__title {
     font-size: 28px;
     margin-bottom: 10px;
@@ -601,6 +603,7 @@ select.form-input {
 }
 
 @media (max-width: 480px) {
+  
   .checkout__title {
     font-size: 24px;
   }

@@ -7,30 +7,41 @@ export function initFloatingButton(options) {
     onClick,
   } = options;
 
-  const floatingButton = document.createElement('button');
-  floatingButton.className = `button ${floatingButtonClass}`;
-  floatingButton.innerHTML =
-    document.querySelector(mainButtonSelector).innerHTML;
-
   const container = document.createElement('div');
   container.className = 'floating-button-container';
-  container.appendChild(floatingButton);
   document.body.appendChild(container);
+
+  const floatingButton = document.createElement('button');
+  floatingButton.className = `button ${floatingButtonClass}`;
+  container.appendChild(floatingButton);
 
   floatingButton.addEventListener('click', onClick);
 
   function checkVisibility() {
-    const mainButton = document.querySelector(mainButtonSelector);
+    const mainButtons = document.querySelectorAll(mainButtonSelector);
     const footer = document.querySelector('footer');
 
-    if (!mainButton || window.innerWidth > 768) {
+    if (mainButtons.length === 0 || window.innerWidth > 768) {
       container.classList.remove('visible');
       return;
     }
 
-    const buttonRect = mainButton.getBoundingClientRect();
-    const isMainVisible =
-      buttonRect.top >= 0 && buttonRect.bottom <= window.innerHeight;
+    let anyButtonVisible = false;
+    let allButtonsAboveFold = true;
+
+    mainButtons.forEach((button) => {
+      const buttonRect = button.getBoundingClientRect();
+      const isVisible =
+        buttonRect.top >= 0 && buttonRect.bottom <= window.innerHeight;
+
+      if (isVisible) {
+        anyButtonVisible = true;
+      }
+
+      if (buttonRect.bottom > window.innerHeight) {
+        allButtonsAboveFold = false;
+      }
+    });
 
     let isFooterNear = false;
     if (footer) {
@@ -38,7 +49,22 @@ export function initFloatingButton(options) {
       isFooterNear = footerRect.top < window.innerHeight - footerOffset;
     }
 
-    if (isMainVisible || isFooterNear) {
+    let targetButton = null;
+    for (const button of mainButtons) {
+      const rect = button.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom > 0) {
+        targetButton = button;
+        break;
+      }
+    }
+    if (!targetButton && mainButtons.length > 0) {
+      targetButton = mainButtons[mainButtons.length - 1];
+    }
+    if (targetButton) {
+      floatingButton.innerHTML = targetButton.innerHTML;
+    }
+
+    if (anyButtonVisible || isFooterNear) {
       container.classList.remove('visible');
     } else {
       container.classList.add('visible');

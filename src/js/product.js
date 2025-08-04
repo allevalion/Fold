@@ -48,6 +48,16 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  const buyBtns = document.querySelectorAll('.buy-button');
+  buyBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const product = getProductData();
+      showNotification(`${product.name} added to cart!`);
+      addToCart(product);
+    });
+  });
+
   const favoriteBtn = document.querySelector('.favorite-button');
   const favoriteBtnText = document.querySelector('.favorite-button__text');
   if (favoriteBtn) {
